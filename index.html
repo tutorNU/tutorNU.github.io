@@ -53,6 +53,12 @@
     <div class="container">
 
       <div class="starter-template">
+        <select id="search_cat">
+          <option default selected disabled>Select filter</option>
+          <option>Price</option>
+          <option>Subject</option>
+        </select>
+        <button type="button" id="search">Go</button>
       </div>
 
     </div><!-- /.container -->
@@ -70,8 +76,8 @@
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.save({foo: "bar"}).then(function(object) {
-        alert("yay! it worked");
     });
     </script>
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>
