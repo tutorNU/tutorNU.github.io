@@ -36,7 +36,7 @@ function display_tutor(tutor)
 function query_parse(suggestion){
   var tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutor);
-//query.equalTo("Subject", suggestion.value);
+  query.equalTo("Subject", suggestion.value);
   
   query.find({
     success: function(results) {
@@ -83,3 +83,5 @@ $("#homeBtn").click(function(){
 });
 
 });
+
+
