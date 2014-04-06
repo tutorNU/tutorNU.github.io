@@ -30,7 +30,6 @@ function display_tutor(tutor)
    var subject = tutor['attributes']['Subject'];
    var price = '$0.00';
    var email = tutor['attributes']['email'];
-   $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+'</td><td>'+email+'</td></tr>');
    $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+"</td><td><a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'>"+
 email+"</a></td></tr>");
 }
@@ -40,7 +39,7 @@ email+"</a></td></tr>");
 function query_parse(suggestion){
   var tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutor);
-query.equalTo("Subject", suggestion.value);
+
   query.equalTo("Subject", suggestion.value);
   
   query.find({
@@ -60,7 +59,6 @@ query.equalTo("Subject", suggestion.value);
 
 function display_all_data()
 {
-
   var tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutor);
 
@@ -68,14 +66,6 @@ function display_all_data()
     success: function(results) {
       console.log("All tutors");
       for (i = 0; i < results.length; i++) {
-        console.log(results[i]['attributes']['Name']);  
-        console.log(results[i]['attributes']['Subject']);
-        console.log(results[i]['attributes']['email']);
-        $('#results > tbody:last').html('');
-
-        // var result  = 'Tutor: ' + results[i]['attributes']['Name'];
-        // var result2 = 'Subject: ' + results[i]['attributes']['Subject'];
-        // var result1 = 'Email: ' + results[i]['attributes']['email'];
         //console.log(results[i]['attributes']['Name']);  
         //console.log(results[i]['attributes']['Subject']);
         //console.log(results[i]['attributes']['email']);
@@ -89,11 +79,9 @@ function display_all_data()
 }
 
 
-
 $("#homeBtn").click(function(){
   display_all_data();
 });
-display_all_data();
 
   display_all_data();
 
