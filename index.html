@@ -26,6 +26,11 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+     <!-- jquery autocomplete plugin -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/jquery.autocomplete.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
   </head>
 
   <body>
@@ -49,6 +54,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <!-- end of header
 
     <div class="container">
 
@@ -61,13 +67,21 @@
         <button type="button" id="search">Go</button>
       </div>
 
-    </div><!-- /.container -->
+    </div> /.container -->
+
+    <div id="searchfield">
+    <form><input type="text" id="autocomplete"></form>
+  </div><!-- @end #searchfield -->
+   
+  <div id="outputbox">
+    <p id="outputcontent"></p>
+  </div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
     <script src="./js/bootstrap.min.js"></script>
     <script type="text/javascript">
     Parse.initialize("BBCxw8FVvBLvQ2cB0PJps6RXN9b7u8Z3Az0eiN8s", "85eYU1NUhGrjwUI2CsswSxnFNm7JawMWHyesP11F");
@@ -78,6 +92,6 @@
     testObject.save({foo: "bar"}).then(function(object) {
     });
     </script>
-    <script type="text/javascript" src="./js/app.js"></script>
+   
   </body>
 </html>
