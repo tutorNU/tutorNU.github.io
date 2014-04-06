@@ -36,13 +36,11 @@ function display_tutor(tutor)
 function query_parse(suggestion){
   var tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutor);
-//query.equalTo("Subject", suggestion.value);
 query.equalTo("Subject", suggestion.value);
   
   query.find({
     success: function(results) {
       console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
-
       $('#results > tbody:last').html('');
       for(var i=0;i<results.length;i++) display_tutor(results[i]);
 
@@ -69,6 +67,9 @@ function display_all_data()
         console.log(results[i]['attributes']['email']);
         $('#results > tbody:last').html('');
 
+        // var result  = 'Tutor: ' + results[i]['attributes']['Name'];
+        // var result2 = 'Subject: ' + results[i]['attributes']['Subject'];
+        // var result1 = 'Email: ' + results[i]['attributes']['email'];
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
       }
       
@@ -81,6 +82,5 @@ function display_all_data()
 $("#homeBtn").click(function(){
   display_all_data();
 });
-
 display_all_data();
 });
