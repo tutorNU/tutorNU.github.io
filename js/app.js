@@ -6,28 +6,32 @@
 */
 $(document).ready(function(){
 
-  var search_options = Parse.Object.extend("search_options");
-  var query = new Parse.Query(search_options);
+  var optionsDB = Parse.Object.extend("search_options");
+  var optionsQuery = new Parse.Query(optionsDB);
 
+  var tutorDB = Parse.Object.extend("tutor");
+  var tutorQuery = new Parse.Query(tutorDB);
 
-  /*query.find({
-    success: function(results) {
-     
+  optionsQuery.find({
+    success: function(results){
+      var suggestion = [];
+      for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
+
+      $('#autocomplete').autocomplete({
+        lookup: suggestion,
+        onSelect: function (suggestion){
+          query_parse(suggestion);
+        }
+      });
     },
-    error: function(error){
-      alert("Error: ");
-    }
-  });
-*/
 
-  
-  $('#autocomplete').autocomplete({
-    lookup: suggestion,
-    onSelect: function (suggestion) {
-      query_parse(suggestion);
+    error: function(err){
+      console.log("failed query");
     }
+
   });
   
+
   function display_tutor(tutor)
   {
     var name = tutor['attributes']['Name'];
@@ -39,9 +43,9 @@ email+"</a></td></tr>");
   }
 
 
-  function query_parse(suggestion){
-    var tutor = Parse.Object.extend("tutor");
-    var query = new Parse.Query(tutor);
+  function query_parse(suggestion)
+  {
+    var query = new Parse.Query(tutorDB);
     query.equalTo("Subject", suggestion.value);
   
     query.find({
@@ -61,8 +65,7 @@ email+"</a></td></tr>");
 
   function display_all_data()
   {
-    var tutor = Parse.Object.extend("tutor");
-    var query = new Parse.Query(tutor);
+    var query = new Parse.Query(tutorDB);
 
     query.find({
       success: function(results) {
