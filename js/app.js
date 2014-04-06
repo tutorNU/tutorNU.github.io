@@ -32,6 +32,7 @@ function display_tutor(tutor)
    var email = tutor['attributes']['email'];
    $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+'</td><td>'+email+'</td></tr>');
    $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+"</td><td><a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'>"+
+email+"</a></td></tr>");
 }
 
 
