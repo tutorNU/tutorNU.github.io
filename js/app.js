@@ -6,6 +6,8 @@
 */
 $(document).ready(function(){
 
+  
+
 var suggestion =[	
 	  { value: 'Game Design', data: 'GD' },
     { value: 'Data Structures', data: 'DS' },
@@ -29,6 +31,7 @@ function display_tutor(tutor)
    var price = '$0.00';
    var email = tutor['attributes']['email'];
    $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+'</td><td>'+email+'</td></tr>');
+   $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+"</td><td><a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'>"+
 }
 
 
@@ -42,6 +45,7 @@ function query_parse(suggestion){
     success: function(results) {
       console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
+      $('#results > tbody:last').html('');
       for(var i=0;i<results.length;i++) display_tutor(results[i]);
 
     },
@@ -65,10 +69,14 @@ function display_all_data()
         console.log(results[i]['attributes']['Name']);  
         console.log(results[i]['attributes']['Subject']);
         console.log(results[i]['attributes']['email']);
+        //console.log(results[i]['attributes']['Name']);  
+        //console.log(results[i]['attributes']['Subject']);
+        //console.log(results[i]['attributes']['email']);
 
         var result  = 'Tutor: ' + results[i]['attributes']['Name'];
         var result2 = 'Subject: ' + results[i]['attributes']['Subject'];
         var result1 = 'Email: ' + results[i]['attributes']['email'];
+        $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
       }
       
@@ -84,4 +92,6 @@ $("#homeBtn").click(function(){
 
 });
 
+  display_all_data();
 
+});
