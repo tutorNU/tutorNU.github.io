@@ -14,14 +14,14 @@ var suggestion =[
     { value: 'Algorithms', data: 'AL' },
 	];
 
-  $('#autocomplete').autocomplete({
+  
+$('#autocomplete').autocomplete({
     lookup: suggestion,
     onSelect: function (suggestion) {
       query_parse(suggestion);
     }
-  });
+});
   
-
 function display_tutor(tutor)
 {
    var name = tutor['attributes']['Name'];
@@ -32,8 +32,8 @@ function display_tutor(tutor)
 }
 
 
-function query_parse(suggestion)
-{
+
+function query_parse(suggestion){
   var tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutor);
 //query.equalTo("Subject", suggestion.value);
@@ -52,8 +52,34 @@ function query_parse(suggestion)
 }
 
 
+function display_all_data()
+{
+
+  var tutor = Parse.Object.extend("tutor");
+  var query = new Parse.Query(tutor);
+
+  query.find({
+    success: function(results) {
+      console.log("All tutors");
+      for (i = 0; i < results.length; i++) {
+        console.log(results[i]['attributes']['Name']);  
+        console.log(results[i]['attributes']['Subject']);
+        console.log(results[i]['attributes']['email']);
+
+        var result  = 'Tutor: ' + results[i]['attributes']['Name'];
+        var result2 = 'Subject: ' + results[i]['attributes']['Subject'];
+        var result1 = 'Email: ' + results[i]['attributes']['email'];
+        for(var i=0;i<results.length;i++) display_tutor(results[i]);
+      }
+      
+    }
+  });
+}
 
 
 
+$("#homeBtn").click(function(){
+  display_all_data();
+});
 
 });
