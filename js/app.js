@@ -28,6 +28,7 @@ query.find({
 	});
 });
 
+
 $(function(){
 	var suggestion =[	
 	  { value: 'Game Design', data: 'GD' },
@@ -36,7 +37,7 @@ $(function(){
     { value: 'Image Processing', data: 'IP' },
     { value: 'Algorithms', data: 'AL' },
 	];
-
+  
 $('#autocomplete').autocomplete({
     lookup: suggestion,
     onSelect: function (suggestion) {
@@ -47,6 +48,29 @@ $('#autocomplete').autocomplete({
   });
   
 });
+
+$("#homeBtn").click(function(){
+    var tutor = Parse.Object.extend("tutor");
+  var query = new Parse.Query(tutor);
+  //query.exists("Subject");
+
+  query.find({
+    success: function(results) {
+      console.log("All tutors");
+      for (i = 0; i < results.length; i++) {
+        console.log(results[i]['attributes']['Name']);  
+        console.log(results[i]['attributes']['Subject']);
+        console.log(results[i]['attributes']['email']);
+
+        var result  = 'Tutor: ' + results[i]['attributes']['Name'];
+        var result2 = 'Subject: ' + results[i]['attributes']['Subject'];
+        var result1 = 'Email: ' + results[i]['attributes']['email'];
+        $('#allDataContent').append(result + "<br>" + result2 + "<br>" + result1 + "<br>");
+      }
+      
+    }
+  });
+}); 
 
 function query_parse(suggestion){
   var tutor = Parse.Object.extend("tutor");
@@ -68,6 +92,10 @@ function query_parse(suggestion){
     alert("Error: ");
   }
 });
+
+}
+
+function display_all_data(){
 
 }
 
