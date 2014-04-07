@@ -47,8 +47,11 @@ body {
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results th{font-size: 10px;}
+#results th{font-size: 10px;padding:20px;}
 
-#results{
-
+#results td{
+  font-size: 15px;
+  padding:20px;
 }
+
+#results .glyphicon-envelope{position:relative;right:50px;}
