@@ -1,6 +1,11 @@
 body {
   padding-top: 50px;
 }
+
+.navbar-inner {
+  background-color: #520063; 
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;

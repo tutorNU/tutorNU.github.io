@@ -38,8 +38,7 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+"</td><td><a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'>"+
-email+"</a></td></tr>");
+    $('#results > tbody:last').append("<tr><td>"+name+"&nbsp;&nbsp;<a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'><span class='glyphicon glyphicon-envelope'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
 
   }
 
