@@ -40,6 +40,7 @@ $(document).ready(function(){
     var email = tutor['attributes']['email'];
     $('#results > tbody:last').append('<tr><td>'+name+'</td><td>'+subject+'</td><td>'+price+"</td><td><a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'>"+
 email+"</a></td></tr>");
+
   }
 
 
@@ -78,6 +79,7 @@ email+"</a></td></tr>");
         for(var i=0;i<results.length;i++) display_tutor(results[i]);      
       }
     });
+
   }
 
 
@@ -86,5 +88,7 @@ email+"</a></td></tr>");
   });
 
   display_all_data();
+
+
 
 });

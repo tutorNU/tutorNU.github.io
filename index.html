@@ -8,7 +8,7 @@
     <meta name="Henry Spindell" content="">
     <link rel="shortcut icon" href="./assets/favicon.ico">
 
-    <title>tutorNU template</title>
+    <title>tutorNU</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -24,12 +24,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+   
      <!-- jquery autocomplete plugin -->
    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./js/jquery.autocomplete.min.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
+
   </head>
 
   <body>
@@ -55,14 +53,16 @@
     </div>
     <!-- ********************end of header********************************************************************************-->
 
-
+    <br/>
     <div id="searchfield">
       <form><input type="text" id="autocomplete" placeholder="Search subject"></form>
     </div><!-- @end #searchfield -->
 
   <table class="table table-striped table-condensed" id="results">
     <thead>
-      <th>Name</th><th>Subject</th><th>Rate(hourly)</th><th>Email</th>
+      <tr>
+        <th>Name</th><th>Subject</th><th>Rate(hourly)</th><th>Email</th>
+      </tr>
     </thead>
     <tbody>
     </tbody>
@@ -76,10 +76,18 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/jquery.autocomplete.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.tablesorter.js"></script>
+
+    <script type="text/javascript" src="./js/app.js"></script>
    
     <script src="./js/bootstrap.min.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script type="text/javascript">
       Parse.initialize("BBCxw8FVvBLvQ2cB0PJps6RXN9b7u8Z3Az0eiN8s", "85eYU1NUhGrjwUI2CsswSxnFNm7JawMWHyesP11F");
     </script>
+
 </body>
 </html>
