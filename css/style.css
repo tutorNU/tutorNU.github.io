@@ -47,7 +47,8 @@ body {
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results th{
+#results th{font-size: 10px;}
 
+#results{
 
 }
