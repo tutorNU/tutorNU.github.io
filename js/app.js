@@ -81,10 +81,11 @@ $(document).ready(function(){
 
   }
 
-
+/*
   $("#homeBtn").click(function(){
     display_all_data();
   });
+*/
 
   display_all_data();
 
