@@ -1,6 +1,11 @@
 body {
   padding-top: 50px;
 }
+
+.navbar-inner {
+  background-color: #520063; 
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -35,7 +40,14 @@ body {
   color: #858585;
 }
 
+#autocomplete{outline:none;}
+
 .autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
 .autocomplete-suggestion { padding: 10px 5px; font-size: 1.2em; white-space: nowrap; overflow: hidden; }
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+
+#results th{
+
+
+}
