@@ -51,7 +51,7 @@ body {
 
 #results td{
   font-size: 15px;
-  padding:20px;
+  padding:20px 10px;
 }
 
 #results .glyphicon-envelope{}
