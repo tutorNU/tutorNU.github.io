@@ -6,11 +6,15 @@
 */
 $(document).ready(function(){
 
+  FastClick.attach(document.body);
+
   var optionsDB = Parse.Object.extend("search_options");
   var optionsQuery = new Parse.Query(optionsDB);
 
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
+
+
 
   optionsQuery.find({
     success: function(results){
