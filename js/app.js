@@ -19,7 +19,7 @@ $(document).ready(function(){
 
       $('#autocomplete').autocomplete({
         lookup: suggestion,
-        onSelect: function (suggestion){
+        Select: function (suggestion){
           query_parse(suggestion);
         }
       });
@@ -88,20 +88,21 @@ $(document).ready(function(){
 
   display_all_data();
 
-
   $('#autocomplete').keyup(
             function(){
                 var searchText = $("#autocomplete").val();
+               if(searchText !=" "){
                $("table tbody tr").each(function(){
-                if ($(this).text().search(new RegExp(searchText, "i")) < 0) {
-                $(this).fadeOut();
-              }
+                if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut();
+            
                 else{
                   $(this).show();
                     }
                   });
+             }
             });
-
+  
+display_all_data();
 
 
 });
