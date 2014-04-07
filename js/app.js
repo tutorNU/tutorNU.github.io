@@ -88,6 +88,7 @@ $(document).ready(function(){
 
   display_all_data();
 
+
   $('#autocomplete').keyup(
             function(){
                 var searchText = $("#autocomplete").val();
