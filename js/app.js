@@ -92,6 +92,19 @@ $("#homeBtn").click(function(){
 });
 
 });
+  $('#autocomplete').keyup(
+            function(){
+                var searchText = $("#autocomplete").val();
+               $("table tbody tr").each(function(){
+                if ($(this).text().search(new RegExp(searchText, "i")) < 0) {
+                $(this).fadeOut();
+              }
+                else{
+                  $(this).show();
+                    }
+                  });
+            });
+
 
   display_all_data();
 
