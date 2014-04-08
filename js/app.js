@@ -31,6 +31,7 @@ $(document).ready(function(){
 
   });
   
+  $("#results").stupidtable();
 
   function display_tutor(tutor)
   {
