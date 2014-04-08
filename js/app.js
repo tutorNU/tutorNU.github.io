@@ -8,15 +8,11 @@ $(document).ready(function(){
 
   FastClick.attach(document.body);
 
-
-
   var optionsDB = Parse.Object.extend("search_options");
   var optionsQuery = new Parse.Query(optionsDB);
 
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
-
-
 
   optionsQuery.find({
     success: function(results){
@@ -27,7 +23,13 @@ $(document).ready(function(){
         lookup: suggestion,
         Select: function (suggestion){
           query_parse(suggestion);
+         
+        },
+        onSelect: function (suggestion){
+          query_parse(suggestion);
+        
         }
+
       });
     },
 
@@ -37,8 +39,6 @@ $(document).ready(function(){
 
   });
   
-  //$("#results").tablesorter();
-
 
   function display_tutor(tutor)
   {
@@ -49,6 +49,7 @@ $(document).ready(function(){
     //<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a>
     var firstname = name.split(' ')[0];
     $('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
+
   }
 
 
@@ -63,7 +64,6 @@ $(document).ready(function(){
 
         $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
-
       },
       error: function(error){
         alert("Error: ");
@@ -89,7 +89,6 @@ $(document).ready(function(){
     });
 
   }
-
 
   $('#autocomplete').keyup(function(){
     var searchText = $("#autocomplete").val();
