@@ -21,6 +21,11 @@ $(document).ready(function(){
         lookup: suggestion,
         Select: function (suggestion){
           query_parse(suggestion);
+         
+        },
+        onSelect: function (suggestion){
+          query_parse(suggestion);
+        
         }
 
       });
@@ -56,6 +61,10 @@ $(document).ready(function(){
         $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
 
+
+
+
+
       },
       error: function(error){
         alert("Error: ");
@@ -89,6 +98,7 @@ $(document).ready(function(){
 
   display_all_data();
 
+ 
   $('#autocomplete').keyup(
             function(){
                 var searchText = $("#autocomplete").val();
@@ -102,7 +112,7 @@ $(document).ready(function(){
                   });
              }
             });
-  
+ 
 display_all_data();
 
 
