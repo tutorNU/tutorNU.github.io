@@ -25,7 +25,11 @@ $(document).ready(function(){
         lookup: suggestion,
         Select: function (suggestion){
           query_parse(suggestion);
-        }
+        },
+        onSelect: function (suggestion){
+          query_parse(suggestion);
+
+        } 
       });
     },
 
@@ -60,13 +64,29 @@ $(document).ready(function(){
 
         $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
+               var searchText = $("#autocomplete").val();
+               if(searchText !=" "){
+               
+               $("table tbody tr").each(function(){
+                if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut();
+            
+                else{
+                  $(this).show();
+                    }
+                 }
+                 )};
+             };
+            
 
-      },
+      
       error: function(error){
         alert("Error: ");
       }
-    });
+    }
+  });
   }
+  
+
 
 
   function display_all_data()
@@ -97,7 +117,7 @@ $(document).ready(function(){
 
   $('#autocomplete').keyup(
             function(){
-                var searchText = $("#autocomplete").val();
+               var searchText = $("#autocomplete").val();
                if(searchText !=" "){
                $("table tbody tr").each(function(){
                 if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut();
