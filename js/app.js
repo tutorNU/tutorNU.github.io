@@ -8,6 +8,8 @@ $(document).ready(function(){
 
   FastClick.attach(document.body);
 
+
+
   var optionsDB = Parse.Object.extend("search_options");
   var optionsQuery = new Parse.Query(optionsDB);
 
@@ -36,7 +38,7 @@ $(document).ready(function(){
   });
   
   //$("#results").tablesorter();
-  $("#results").stupidtable();
+
 
   function display_tutor(tutor)
   {
@@ -44,9 +46,9 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
+    //<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a>
     var firstname = name.split(' ')[0];
-    $('#results > tbody:last').append("<tr><td>"+firstname+"&nbsp;&nbsp;<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
-
+    $('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
   }
 
 
@@ -89,20 +91,26 @@ $(document).ready(function(){
   }
 
 
-  $('#autocomplete').keyup(
-            function(){
-                var searchText = $("#autocomplete").val();
-               if(searchText !=" "){
-               $("table tbody tr").each(function(){
-                if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut();
-            
-                else{
-                  $(this).show();
-                    }
-                  });
-             }
-            });
+  $('#autocomplete').keyup(function(){
+    var searchText = $("#autocomplete").val();
+    if(searchText !=" "){
+      $("table tbody tr").each(function(){
+        if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut(); 
+        else{
+          $(this).show();
+        }
+      });
+    }
+  });
   
-display_all_data();
+  display_all_data();
+
+  $("#results").stupidtable();
+  //highlight to show which column is being sorted 
+  $("#results th").click(function(){
+    $(this).siblings().removeClass("bg-success");
+    $(this).addClass("bg-success");
+  });
+
 
 });
