@@ -31,6 +31,7 @@ $(document).ready(function(){
 
   });
   
+  //$("#results").tablesorter();
   $("#results").stupidtable();
 
   function display_tutor(tutor)
@@ -103,7 +104,6 @@ $(document).ready(function(){
                     }
                   });
             });
-
 
 
 });
