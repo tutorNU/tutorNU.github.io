@@ -6,11 +6,15 @@
 */
 $(document).ready(function(){
 
+  FastClick.attach(document.body);
+
   var optionsDB = Parse.Object.extend("search_options");
   var optionsQuery = new Parse.Query(optionsDB);
 
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
+
+
 
   optionsQuery.find({
     success: function(results){
@@ -19,7 +23,7 @@ $(document).ready(function(){
 
       $('#autocomplete').autocomplete({
         lookup: suggestion,
-        onSelect: function (suggestion){
+        Select: function (suggestion){
           query_parse(suggestion);
         }
       });
@@ -40,7 +44,7 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    $('#results > tbody:last').append("<tr><td>"+name+"&nbsp;&nbsp;<a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'><span class='glyphicon glyphicon-envelope'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
+    $('#results > tbody:last').append("<tr><td>"+name.split(' ')[0]+"&nbsp;&nbsp;<a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
 
   }
 
@@ -91,19 +95,20 @@ $(document).ready(function(){
 
   display_all_data();
 
-
   $('#autocomplete').keyup(
             function(){
                 var searchText = $("#autocomplete").val();
+               if(searchText !=" "){
                $("table tbody tr").each(function(){
-                if ($(this).text().search(new RegExp(searchText, "i")) < 0) {
-                $(this).fadeOut();
-              }
+                if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut();
+            
                 else{
                   $(this).show();
                     }
                   });
+             }
             });
-
+  
+display_all_data();
 
 });
