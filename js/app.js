@@ -48,7 +48,8 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    $('#results > tbody:last').append("<tr><td>"+name.split(' ')[0]+"&nbsp;&nbsp;<a href='mailto:"+email+"?Subject="+subject+"%20tutoring' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
+    var firstname = name.split(' ')[0];
+    $('#results > tbody:last').append("<tr><td>"+firstname+"&nbsp;&nbsp;<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a></td><td>"+subject+"</td><td>"+price+"</td></tr>");
 
   }
 
@@ -107,13 +108,6 @@ $(document).ready(function(){
 
   }
 
-/*
-  $("#homeBtn").click(function(){
-    display_all_data();
-  });
-*/
-
-  display_all_data();
 
   $('#autocomplete').keyup(
             function(){
