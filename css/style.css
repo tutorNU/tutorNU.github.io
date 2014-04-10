@@ -1,11 +1,13 @@
 body { padding-top:50px;
   padding-bottom: 50px;
+ 
   
 }
 
 .navbar-inverse{
   background-color: #520063; 
 }
+
 
 
 .starter-template {
@@ -30,7 +32,7 @@ body { padding-top:50px;
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results{margin:0px;padding:0px;}
+#results{margin:0px;padding:0px;overflow: visible;}
 
 #results th{font-size: 10px;padding:20px;}
 
@@ -43,6 +45,8 @@ body { padding-top:50px;
 padding-left: 5px;
 
 }
+
+
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
 
@@ -59,4 +63,4 @@ padding-left: 5px;
     padding: 10px 12px;
     pointer-events: none;
 }
-.glyphicon
+
