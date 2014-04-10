@@ -1,5 +1,5 @@
-body {
-  padding-top: 50px;
+body { padding-top:50px;
+  padding-bottom:   50px;
 }
 
 .navbar-inner {
@@ -10,6 +10,9 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+
+
 
 #searchfield { display: block; width: 100%; text-align: center; margin-bottom: 35px; }
 #outputcontent{text-align:center;}
