@@ -6,7 +6,7 @@ body {
   background-color: #520063; 
 }
 
-#searchfield {margin:10px auto; padding-top:20px; }
+#searchfield {margin:10px auto; padding-top:100px; }
 #outputcontent{text-align:center;}
 
 #autocomplete{outline:none;}
