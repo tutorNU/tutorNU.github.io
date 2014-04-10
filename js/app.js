@@ -104,6 +104,28 @@ $(document).ready(function(){
   
   display_all_data();
 
+  function private_browsing()
+  {
+    var storageTestKey = 'sTest',
+    storage = window.sessionStorage;
+
+    try {
+      storage.setItem(storageTestKey, 'test');
+      storage.removeItem(storageTestKey);
+    } 
+    catch (e) {
+      if (e.code == DOMException.QUOTA_EXCEEDED_ERR && storage.length == 0) {
+        // private mode
+        alert("Please disable private browsing!");
+      } 
+      else {
+        throw e;
+      }
+    }
+  }
+
+  private_browsing();
+
   $("#results").stupidtable();
   //highlight to show which column is being sorted 
   $("#results th").click(function(){
