@@ -1,12 +1,13 @@
 body { padding-top:50px;
-  padding-bottom:   50px;
+  padding-bottom: 50px;
+  
 }
 
 .navbar-inverse{
   background-color: #520063; 
 }
 
-<<<<<<< HEAD
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -15,10 +16,11 @@ body { padding-top:50px;
 
 
 
+
 #searchfield { display: block; width: 100%; text-align: center; margin-bottom: 35px; }
-=======
+
 #searchfield {margin:10px auto; }
->>>>>>> e5fb02c6534bd98302bda2d634e73412b3ad2f29
+
 #outputcontent{text-align:center;}
 
 #autocomplete{outline:none;}
@@ -57,3 +59,4 @@ padding-left: 5px;
     padding: 10px 12px;
     pointer-events: none;
 }
+.glyphicon
