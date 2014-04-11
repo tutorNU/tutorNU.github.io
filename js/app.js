@@ -58,6 +58,7 @@ $(document).ready(function(){
         //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
 <<<<<<< HEAD
+
         $('#results > tbody:last').html('');
         $('#datadiv').html('<hr>');
         for(var i=0;i<results.length;i++) 
