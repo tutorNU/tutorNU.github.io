@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$('#aboutbar').html(name.split(' ')[0]);
 			$('#major').html(major);
 			$('#year').html(year);
-			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Hello "+name.split(' ')[0]+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about _____.  Would it be possible for us to meet and talk specifics?' target='_blank'>"+email+"</span></a>");
+			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Hello "+name.split(' ')[0]+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about _____.  Would it be possible for us to meet and talk specifics?' target='_blank'>Send "+name.split(' ')[0]+" an email!</span></a>");
 
 			$('#profileTabs a').click(function(e){
   				e.preventDefault();
