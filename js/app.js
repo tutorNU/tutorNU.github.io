@@ -121,6 +121,20 @@ $(document).ready(function(){
   });
 
   
+/*
+ * Fix for footer when the keyboard is displayed
+ */
+$(document).on('focus', 'input, textarea', function() 
+{
+  $.mobile.activePage.find("div[data-role='footer']").hide();
+});
+
+$(document).on('blur', 'input, textarea', function() 
+{
+  $.mobile.activePage.find("div[data-role='footer']").show();
+});
+
+
 
   
 
