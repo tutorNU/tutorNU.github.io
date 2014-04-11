@@ -9,8 +9,7 @@ body { padding-top:50px;}
 
 
 
-#searchfield {margin:10px auto;
-			  }
+#searchfield {margin:10px auto;}
 
 #outputcontent{text-align:center;}
 
@@ -21,7 +20,7 @@ body { padding-top:50px;}
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results{margin:0px;padding:0px;overflow: hidden;}
+#results{margin:0px;padding:0px;}
 
 #results th{font-size: 10px;padding:20px;}
 

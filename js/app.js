@@ -18,19 +18,6 @@ $(document).ready(function(){
     success: function(results){
       var suggestion = [];
       for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
-
-      $('#autocomplete').autocomplete({
-        lookup: suggestion,
-        Select: function (suggestion){
-          query_parse(suggestion);
-         
-        },
-        onSelect: function (suggestion){
-          query_parse(suggestion);
-        
-        }
-
-      });
     },
 
     error: function(err){
