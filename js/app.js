@@ -139,7 +139,19 @@ $(document).ready(function(){
     $(this).addClass("bg-success");
   });
 
-  
+  //fix the header floating bugs
+  if(Modernizr.touch)
+  {
+    var $body = jQuery('body');
+
+    $(document)
+    .on('focus', 'input', function(e) {
+        $body.addClass('fixfixed');
+    })
+    .on('blur', 'input', function(e) {
+        $body.removeClass('fixfixed');
+    });
+  }
 
 
 
