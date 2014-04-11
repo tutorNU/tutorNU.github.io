@@ -1,11 +1,10 @@
 #header .container{color:white;}
 
 
-#content{
-
-	padding-top:50px;
-}
+#content{padding-top:50px;}
 
 #back{
 	cursor:pointer;
 }
+
+.tab-pane{padding:4%;}

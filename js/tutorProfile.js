@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	$('#header .container').html("<span id='back' class='glyphicon glyphicon-chevron-left'></span><center><h2>Tutor Profile</h2></center>");
-
+	$('#header .container').html("<center><h2>Tutor Profile</h2></center>");
+//<span id='back' class='glyphicon glyphicon-chevron-left'></span>
 
 	$('#profileTabs a').click(function(e){
   		e.preventDefault();

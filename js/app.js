@@ -43,7 +43,7 @@ $(document).ready(function(){
     $('#datadiv').append("<div class='row'><div class='col-sm-4'><div class='media'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-4 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+firstname+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></div></div><hr>");
     // $('#datadiv').append("<div>"+firstname+"<br>"+subject+"<br>"+price+"<hr></div>");
 
-    $('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
+    //$('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
 
   }
 
@@ -57,7 +57,8 @@ $(document).ready(function(){
       success: function(results){
         //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
-        $('#results > tbody:last').html('');
+        //$('#results > tbody:last').html('');
+        $('#datadiv > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);
       },
       error: function(error){
