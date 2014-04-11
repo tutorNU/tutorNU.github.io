@@ -19,7 +19,7 @@ $(document).ready(function(){
       var suggestion = [];
       for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
     
-
+    },
     error: function(err){
       console.log("failed query");
     }
@@ -93,10 +93,16 @@ $(document).ready(function(){
   $('#autocomplete').keyup(function(){
     var searchText = $("#autocomplete").val();
     if(searchText !=" "){
-      $("table tbody tr").each(function(){
-        if ($(this).text().search(new RegExp(searchText, "i")) < 0) $(this).fadeOut(); 
+      console.log("#datadiv");
+      $("#datadiv .media-body").each(function(){
+        if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
+          {
+            $(this).fadeOut();
+            $(this).siblings().fadeOut();
+          } 
         else{
           $(this).show();
+          $(this).siblings().show();
         }
       });
     }
@@ -134,18 +140,7 @@ $(document).ready(function(){
   });
 
   
-/*
- * Fix for footer when the keyboard is displayed
- */
-$(document).on('focus', 'input, textarea', function() 
-{
-  $.mobile.activePage.find("div[data-role='footer']").hide();
-});
 
-$(document).on('blur', 'input, textarea', function() 
-{
-  $.mobile.activePage.find("div[data-role='footer']").show();
-});
 
 
 
