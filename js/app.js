@@ -57,7 +57,6 @@ $(document).ready(function(){
       success: function(results){
         //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
-<<<<<<< HEAD
 
         $('#results > tbody:last').html('');
         $('#datadiv').html('<hr>');
@@ -65,11 +64,6 @@ $(document).ready(function(){
         {
           display_tutor(results[i]);
         }
-=======
-        //$('#results > tbody:last').html('');
-        $('#datadiv > tbody:last').html('');
-        for(var i=0;i<results.length;i++) display_tutor(results[i]);
->>>>>>> FETCH_HEAD
       },
       error: function(error){
         alert("Error: ");
