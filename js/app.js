@@ -40,7 +40,6 @@ $(document).ready(function(){
     var next = $("#localinnerdatadiv");
     next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
 
-    $('#datadiv').append("<div class='row'><div class='col-sm-2'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-3 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+name+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></div><hr>");
     $('#datadiv').append("<div class='row'><a href='./tutorProfile.html'><div class='col-sm-2'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-3 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+name+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></a></div><hr>");
     // $('#datadiv').append("<div>"+firstname+"<br>"+subject+"<br>"+price+"<hr></div>");
 
