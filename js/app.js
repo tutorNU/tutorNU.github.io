@@ -48,6 +48,14 @@ $(document).ready(function(){
     var email = tutor['attributes']['email'];
     //<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a>
     var firstname = name.split(' ')[0];
+
+
+    var next = $("#localinnerdatadiv");
+    next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
+
+    $('#datadiv').append("<div class='row'><div class='col-sm-4'><div class='media'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-4 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+firstname+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></div></div><hr>");
+    // $('#datadiv').append("<div>"+firstname+"<br>"+subject+"<br>"+price+"<hr></div>");
+
     $('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
 
   }
