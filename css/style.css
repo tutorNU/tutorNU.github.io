@@ -16,12 +16,12 @@ body { padding-top:50px;}
 
 #autocomplete{outline:none;}
 
-.autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
-.autocomplete-suggestion { padding: 10px 5px; font-size: 1em; white-space: nowrap; overflow: hidden; }
+.autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default;  }
+.autocomplete-suggestion { padding: 10px 5px; font-size: 1em; white-space: nowrap;  }
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results{margin:0px;padding:0px;}
+#results{margin:0px;padding:0px;overflow: hidden;}
 
 #results th{font-size: 10px;padding:20px;}
 
