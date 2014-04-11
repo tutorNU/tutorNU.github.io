@@ -18,7 +18,7 @@ $(document).ready(function(){
     success: function(results){
       var suggestion = [];
       for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
-    },
+    
 
     error: function(err){
       console.log("failed query");
