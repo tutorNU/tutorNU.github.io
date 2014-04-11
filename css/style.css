@@ -13,13 +13,19 @@ body { padding-top:50px;
   text-align: center;
 }
 
+body { padding-top:50px;}
 
 
+.navbar-inverse{
+  background-color: #520063; 
+}
 
 
 #searchfield { display: block; width: 100%; text-align: center; margin-bottom: 35px; }
 
 #searchfield {margin:10px auto; }
+#searchfield {margin:10px auto;
+			  }
 
 #outputcontent{text-align:center;}
 
@@ -27,10 +33,11 @@ body { padding-top:50px;
 
 .autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
 .autocomplete-suggestion { padding: 10px 5px; font-size: 1em; white-space: nowrap; overflow: hidden; }
+.autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default;  }
+.autocomplete-suggestion { padding: 10px 5px; font-size: 1em; white-space: nowrap;  }
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
-#results{margin:0px;padding:0px;}
 
 #results th{font-size: 10px;padding:20px;}
 
@@ -43,6 +50,8 @@ body { padding-top:50px;
 padding-left: 5px;
 
 }
+
+
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
 
