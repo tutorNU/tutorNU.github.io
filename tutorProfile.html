@@ -6,10 +6,10 @@
 
 
     <div class='container'id='content'>
-          <img class="img-circle" width="140px" src="./placeholder.png">
+          <img id="profpic" class="img-circle" src="./placeholder.png" />
 
 
-          <div class="panel panel-success" style="float:right;width:65%;">
+          <div class="panel panel-success" id="aboutbox">
               <div class="panel-heading">
                 <h3 class="panel-title">About <span id="aboutbar"></span></h3>
               </div>
@@ -18,10 +18,12 @@
               </div>
           </div>
 
-          <ul id="profileTabs" class="nav nav-tabs" style="padding-top:10%;">
-            <li class="active"><a href="#info">Info</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-          </ul>
+          <div>
+           <ul id="profileTabs" class="nav nav-tabs" style="padding-top:10%;">
+              <li class="active"><a href="#info">Info</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+            </ul>
+          </div>
 
           <div id="tabContent" class="tab-content">
             <div class="tab-pane active in" id="info">
@@ -30,7 +32,6 @@
                 <li>Databases</li>
               </ul>
             </div>
-
             <div class="tab-pane" id="reviews">
               <p>"This tutor was amazing and helped me pass my class! 4 stars!" - Jane Smith</p>
             </div>
