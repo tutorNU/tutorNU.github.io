@@ -17,7 +17,7 @@ $(document).ready(function(){
    		var subject = results[0]['attributes']['Subject'];
    		var email = results[0]['attributes']['email'];
    		var year = results[0]['attributes']['Year'];
-			$('#header .container').html("<center><h2>"+name+"</h2></center>");
+			$('#header .container').html("<center><h3>"+name+"</h3></center>");
 			//<span id='back' class='glyphicon glyphicon-chevron-left'></span>
 
 			$('#aboutbar').html(name.split(' ')[0]);
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		},
 
 		error: function(err){
-      	$('#header .container').html("<center><h2>Error</h2></center>");
+      	$('#header .container').html("<center><h3>Error</h3></center>");
     	}
 
    });
