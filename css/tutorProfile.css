@@ -9,6 +9,6 @@
 
 .tab-pane{padding:4%;}
 
-#profpic{width:30%;}
+#profpic{width:30%;float:left;}
 
 #aboutbox{float:right;width:60%;}
