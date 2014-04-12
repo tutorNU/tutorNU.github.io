@@ -33,7 +33,6 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    //<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a>
     var firstname = name.split(' ')[0];
 
 
@@ -41,10 +40,6 @@ $(document).ready(function(){
     next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
 
     $('#datadiv').append("<div class='row'><a href='./tutorProfile.html'><div class='col-sm-2'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-3 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+name+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></a></div><hr>");
-    // $('#datadiv').append("<div>"+firstname+"<br>"+subject+"<br>"+price+"<hr></div>");
-
-    //$('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
-
   }
 
 
@@ -57,9 +52,7 @@ $(document).ready(function(){
       success: function(results){
         //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
-
-        $('#results > tbody:last').html('');
-        $('#datadiv').html('<hr>');
+        $('#datadiv').html('');
         for(var i=0;i<results.length;i++) 
         {
           display_tutor(results[i]);
@@ -83,7 +76,6 @@ $(document).ready(function(){
         //console.log(results[i]['attributes']['Subject']);
         //console.log(results[i]['attributes']['email']);
 
-        $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);      
       }
     });
@@ -93,7 +85,6 @@ $(document).ready(function(){
   $('#autocomplete').keyup(function(){
     var searchText = $("#autocomplete").val();
     if(searchText !=" "){
-      console.log("#datadiv");
       $("#datadiv .media-body").each(function(){
         if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
           {
@@ -131,13 +122,6 @@ $(document).ready(function(){
   }
 
   private_browsing();
-
-  $("#results").stupidtable();
-  //highlight to show which column is being sorted 
-  $("#results th").click(function(){
-    $(this).siblings().removeClass("bg-success");
-    $(this).addClass("bg-success");
-  });
 
   //fix the header floating bugs
 // iOS check...ugly but necessary

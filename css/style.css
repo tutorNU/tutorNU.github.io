@@ -1,15 +1,9 @@
-
-
-body { padding-top:50px;
-	
-	}
+body { padding-top:50px;}
 
 
 
 
-.navbar-inverse{
-  background-color: #520063; 
-}
+.navbar-inverse{background-color: #520063;}
 
 #content{margin-top:50px;}
 
@@ -19,25 +13,14 @@ body { padding-top:50px;
 
 #autocomplete{outline:none;}
 
-.autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default;  }
+/*.autocomplete-suggestions {height:15%; border: 1px solid #999; background: #fff; cursor: default;  }
 .autocomplete-suggestion { padding: 10px 5px; font-size: 1em; white-space: nowrap;  }
 .autocomplete-selected { background: #f0f0f0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+*/
 
-#results{margin:0px;padding:0px;}
 
-#results th{font-size: 10px;padding:20px;}
-
-#results td{
-  font-size: 15px;
-  padding:20px 10px;
-}
-
-#results .glyphicon-sort{
-padding-left: 5px;
-
-}
-
+#datadiv{padding:0 15px;}
 
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
