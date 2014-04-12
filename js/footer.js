@@ -1,4 +1,5 @@
-document.write("<div id='footer'>"+
+document.write("</div>"+
+  "<div id='footer'>"+
       "<div class='col-xs-12 navbar-inverse navbar-fixed-bottom'>"+
         "<div class='row' id='bottomNav'>"+
           "<div class='col-xs-4 text-center'><a href='./index.html'><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+

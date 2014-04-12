@@ -33,4 +33,5 @@ document.write(
         "<input type='text' class='form-control' placeholder='Search'>"+
       "</div>"+
       "</div>"+
-    "</div>");
+    "</div>"+
+    "<div class='container' id='content'>");
