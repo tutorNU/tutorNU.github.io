@@ -8,7 +8,14 @@ $(document).ready(function(){
 	var tutorDB = Parse.Object.extend("tutor");
    var query = new Parse.Query(tutorDB);
 
-   query.equalTo("Subject", "Java");
+
+	//console.log(location.href);
+	var url = location.href;
+	//console.log(url);
+	var searchname = url.substring(url.indexOf('#')+1,url.length);
+	//console.log(searchname);
+
+   query.equalTo("Name", searchname);
 
    query.find({
    	success: function(results){

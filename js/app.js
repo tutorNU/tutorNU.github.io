@@ -39,17 +39,17 @@ $(document).ready(function(){
     //var next = $("#localinnertutor-list");
     //next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
 
-    $('#tutor-list').append("<div class='tutor-link to-profile'>"+
-        "<div class='row to-profile'>"+
-          "<div class='col-sm-2 to-profile'>"+
-            "<div class='row to-profile'>"+
-              "<div class='media-img  pull-left  col-sm-5  col-md-3 to-profile'>"+
+    $('#tutor-list').append("<div class='tutor-link'>"+
+        "<div class='row'>"+
+          "<div class='col-sm-2'>"+
+            "<div class='row'>"+
+              "<div class='media-img  pull-left  col-sm-5  col-md-3'>"+
                 "<img src='./icons/artwork-source.png' alt='About'  width='50' height='50' />"+
               "</div>"+
-              "<div class='media-body to-profile  col-sm-7 col-md-8  '>"+
-                "<h4 class='media-heading to-profile'>"+name+"</h4>"+
-                "<p class='hidden-sm to-profile'>"+subject+"</p>"+
-                "<p class='hidden-sm to-profile'>Hourly rate: $"+price+"</p>"+
+              "<div class='media-body  col-sm-7 col-md-8  '>"+
+                "<h4 class='media-heading'>"+name+"</h4>"+
+                "<p class='hidden-sm'>"+subject+"</p>"+
+                "<p class='hidden-sm'>Hourly rate: $"+price+"</p>"+
               "</div>"+
             "</div>"+
           "</div>"+
@@ -170,10 +170,15 @@ $(document).ready(function(){
   }
 
 
-  $('.to-profile').click(function(){
-    location.href = "./tutor_profile.html";
-  });
 
+
+  //so it will notice dynamically added elements also
+  $(document).on("click", ".tutor-link", function(){
+    var name = $(this).find('h4').text();
+    location.href="./tutor_profile.html#"+name;
+
+
+  });
 
   
  
