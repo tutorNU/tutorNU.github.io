@@ -25,7 +25,6 @@ $(document).ready(function(){
    		var email = results[0]['attributes']['email'];
    		var year = results[0]['attributes']['Year'];
 			$('#header .container').html("<center><h3>"+name+"</h3></center>");
-			//<span id='back' class='glyphicon glyphicon-chevron-left'></span>
 
 			$('#aboutbar').html(name.split(' ')[0]);
 			$('#major').html(major);
