@@ -36,10 +36,25 @@ $(document).ready(function(){
     var firstname = name.split(' ')[0];
 
 
-    var next = $("#localinnerdatadiv");
-    next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
+    //var next = $("#localinnertutor-list");
+    //next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
 
-    $('#datadiv').append("<div class='row'><a href='./tutorProfile.html'><div class='col-sm-2'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-3 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+name+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></a></div><hr>");
+    $('#tutor-list').append("<div class='tutor-link to-profile'>"+
+        "<div class='row to-profile'>"+
+          "<div class='col-sm-2 to-profile'>"+
+            "<div class='row to-profile'>"+
+              "<div class='media-img  pull-left  col-sm-5  col-md-3 to-profile'>"+
+                "<img src='./icons/artwork-source.png' alt='About'  width='50' height='50' />"+
+              "</div>"+
+              "<div class='media-body to-profile  col-sm-7 col-md-8  '>"+
+                "<h4 class='media-heading to-profile'>"+name+"</h4>"+
+                "<p class='hidden-sm to-profile'>"+subject+"</p>"+
+                "<p class='hidden-sm to-profile'>Hourly rate: $"+price+"</p>"+
+              "</div>"+
+            "</div>"+
+          "</div>"+
+        "</div>"+
+      "</div>");
   }
 
 
@@ -50,9 +65,8 @@ $(document).ready(function(){
   
     query.find({
       success: function(results){
-        //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
-        $('#datadiv').html('');
+        $('#tutor-list').html('');
         for(var i=0;i<results.length;i++) 
         {
           display_tutor(results[i]);
@@ -71,11 +85,6 @@ $(document).ready(function(){
 
     query.find({
       success: function(results) {
-        //console.log("All tutors");
-        //console.log(results[i]['attributes']['Name']);  
-        //console.log(results[i]['attributes']['Subject']);
-        //console.log(results[i]['attributes']['email']);
-
         for(var i=0;i<results.length;i++) display_tutor(results[i]);      
       }
     });
@@ -85,15 +94,15 @@ $(document).ready(function(){
   $('#autocomplete').keyup(function(){
     var searchText = $("#autocomplete").val();
     if(searchText !=" "){
-      $("#datadiv .media-body").each(function(){
+      $("#tutor-list .media-body").each(function(){
         if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
           {
-            $(this).fadeOut();
-            $(this).siblings().fadeOut();
+            $(this).parent().parent().parent().parent().fadeOut();
+            //$(this).siblings().fadeOut();
           } 
         else{
-          $(this).show();
-          $(this).siblings().show();
+          $(this).parent().parent().parent().parent().show();
+          //$(this).siblings().show();
         }
       });
     }
@@ -158,12 +167,16 @@ $(document).ready(function(){
 
     });
 
-}
+  }
 
 
+  $('.to-profile').click(function(){
+    location.href = "./tutor_profile.html";
+  });
 
 
   
+ 
 
  
 });
