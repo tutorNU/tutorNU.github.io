@@ -8,15 +8,15 @@
 
 #profile-bottom{
 	width:100%;
+	margin-top:-20px;
 }
 
 #back{
 	cursor:pointer;
 }
 
-.tab-pane{}
+.tab-pane{padding:4%;}
 
 #profpic{width:30%;float:left;}
 
-#aboutbox{float:right;width:60%;}
-#aboutbox a{font-size: 8px;}
+#aboutbox{float:right;width:60%;height:40%;margin-top:-20px;}
