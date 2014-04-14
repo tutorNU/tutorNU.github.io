@@ -30,7 +30,7 @@ document.write(
       "<div class='container'>"+
       "<div class='input-group' id='searchfield'>"+
         "<span class='input-group-addon'><span class='glyphicon glyphicon-search'></span></span>"+
-        "<input type='text' id='autocomplete' class='form-control' placeholder='Search'>"+
+        "<input type='text' id='autocomplete' class='form-control' placeholder='Search by subject, price, etc.'>"+
       "</div>"+
       "</div>"+
     "</div>"+

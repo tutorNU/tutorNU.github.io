@@ -21,7 +21,6 @@ document.write("</div>"+
 
     "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js'></script>"+
     "<script src='https://www.parsecdn.com/js/parse-1.2.18.min.js'></script>"+
-
     "<script type='text/javascript'>"+
       "Parse.initialize('BBCxw8FVvBLvQ2cB0PJps6RXN9b7u8Z3Az0eiN8s', '85eYU1NUhGrjwUI2CsswSxnFNm7JawMWHyesP11F');"+
     "</script>"+
