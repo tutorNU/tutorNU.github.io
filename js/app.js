@@ -97,7 +97,7 @@ $(document).ready(function(){
       $("#tutor-list .media-body").each(function(){
         if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
           {
-            $(this).parent().parent().parent().parent().fadeOut();
+            $(this).parent().parent().parent().parent().hide();
             //$(this).siblings().fadeOut();
           } 
         else{
