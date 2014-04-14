@@ -1,19 +1,20 @@
-body { padding-top:50px;}
+body {padding-top:70px;}
 
-
+.navbar{height:70px;}
 
 
 .navbar-inverse{background-color: #520063;}
 
 #content{margin-top:50px;padding:0 15px;margin-bottom:50px;}
 
-#searchfield {margin:10px auto; outline:none;}
+/*margin:top right bottom left;*/
+#searchfield {margin:30px auto 10px; outline:none;}
 
 #outputcontent{text-align:center;}
 
 #autocomplete{outline:none;}
 
-#tutor-list{margin-top:-30px;}
+#tutor-list{margin-top:-40px;}
 
 #tutor-list a{text-decoration: none;color:inherit;}
 

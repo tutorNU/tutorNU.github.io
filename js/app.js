@@ -8,13 +8,10 @@ $(document).ready(function(){
 
   FastClick.attach(document.body);
 
-  var optionsDB = Parse.Object.extend("search_options");
-  var optionsQuery = new Parse.Query(optionsDB);
-
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
 
-  optionsQuery.find({
+  /*optionsQuery.find({
     success: function(results){
       var suggestion = [];
       for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
@@ -24,7 +21,7 @@ $(document).ready(function(){
       console.log("failed query");
     }
 
-  });
+  });*/
   
 
   function display_tutor(tutor)
@@ -33,11 +30,6 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    var firstname = name.split(' ')[0];
-
-
-    //var next = $("#localinnertutor-list");
-    //next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
 
     $('#tutor-list').append("<div class='tutor-link'>"+
         "<div class='row'>"+
@@ -98,11 +90,9 @@ $(document).ready(function(){
         if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
           {
             $(this).parent().parent().parent().parent().hide();
-            //$(this).siblings().fadeOut();
           } 
         else{
           $(this).parent().parent().parent().parent().show();
-          //$(this).siblings().show();
         }
       });
     }
@@ -176,8 +166,10 @@ $(document).ready(function(){
   $(document).on("click", ".tutor-link", function(){
     var name = $(this).find('h4').text();
     location.href="./tutor_profile.html#"+name;
+  });
 
-
+  $(document).on("click", "#homenav", function(){
+    location.href= "./index.html";
   });
 
   
