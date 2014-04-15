@@ -48,6 +48,6 @@ body {padding-top:80px;}
   .BOTTOM_TOOLBAR {
     bottom: 0;
   }
-  .to-profile {
+  .SCROLLER_FRAME {
     width: 100%; position: absolute; top: 50px; bottom: 50px;
   }
