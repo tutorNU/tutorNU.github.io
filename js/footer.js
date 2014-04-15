@@ -1,6 +1,6 @@
 document.write("</div>"+
   "<div id='footer'>"+
-     "<div class=”BOTTOM_TOOLBAR”>"+
+    
       "<div class='col-xs-12 navbar-inverse navbar-fixed-bottom'>"+
         "<div class='row' id='bottomNav'>"+
           "<div  class='col-xs-12 text-center'><a id='homenav' href=''><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+
@@ -8,7 +8,7 @@ document.write("</div>"+
          // "<div class='col-xs-4 text-center'><a href='#'><i class='glyphicon glyphicon-envelope'></i><br>Contact</a></div>"+
         "</div>"+
       "</div>"+
-      "</div>"+
+     
     "</div>"+
 
 

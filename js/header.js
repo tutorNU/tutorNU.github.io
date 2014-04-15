@@ -27,7 +27,7 @@ document.write(
   
   "<body>"+
     "<div id='header' class='navbar navbar-inverse navbar-fixed-top'>"+
-      "<div class ='TOP_TOOLBAR' >"+
+      
       "<div class='container'>"+
 
       "<div class='input-group' id='searchfield'>"+
@@ -36,5 +36,5 @@ document.write(
       "</div>"+
       "</div>"+
     "</div>"+
-    "</div>"+
+   
     "<div class='container' id='content'>");
