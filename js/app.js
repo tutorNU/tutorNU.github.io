@@ -8,13 +8,10 @@ $(document).ready(function(){
 
   FastClick.attach(document.body);
 
-  var optionsDB = Parse.Object.extend("search_options");
-  var optionsQuery = new Parse.Query(optionsDB);
-
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
 
-  optionsQuery.find({
+  /*optionsQuery.find({
     success: function(results){
       var suggestion = [];
       for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
@@ -24,7 +21,7 @@ $(document).ready(function(){
       console.log("failed query");
     }
 
-  });
+  });*/
   
 
   function display_tutor(tutor)
@@ -33,18 +30,23 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
-    //<a href='mailto:tutor@gmail.com?Subject="+subject+"%20tutoring&body=Hello "+firstname+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about "+subject+".  Would it be possible for us to meet and talk specifics?' target='_blank'><span class='glyphicon glyphicon-envelope pull-right'></span></a>
-    var firstname = name.split(' ')[0];
 
-
-    var next = $("#localinnerdatadiv");
-    next.html(firstname+"<br>"+subject+"<br>"+price+"<br>");
-
-    $('#datadiv').append("<div class='row'><a href='./tutorProfile.html'><div class='col-sm-2'><div class='row '><div class='media-img  pull-left  col-sm-5  col-md-3 '><img src='./icons/artwork-source.png' alt='About'  width='50' height='50' /></div><div class='media-body   col-sm-7 col-md-8  '><h4 class='media-heading'>"+name+"</h4><p class='hidden-sm'>Subject: "+subject+"</p><p class='hidden-sm'>Hourly rate: $"+price+"</p></div></div></div></a></div><hr>");
-    // $('#datadiv').append("<div>"+firstname+"<br>"+subject+"<br>"+price+"<hr></div>");
-
-    //$('#results > tbody:last').append("<tr ><td>"+firstname+"</td><td>"+subject+"</td><td>"+price+"</td></tr>");
-
+    $('#tutor-list').append("<div class='tutor-link'>"+
+        "<div class='row'>"+
+          "<div class='col-sm-2'>"+
+            "<div class='row'>"+
+              "<div class='media-img  pull-left  col-sm-5  col-md-3'>"+
+                "<img src='./icons/artwork-source.png' alt='About'  width='50' height='50' />"+
+              "</div>"+
+              "<div class='media-body  col-sm-7 col-md-8  '>"+
+                "<h4 class='media-heading'>"+name+"</h4>"+
+                "<p class='hidden-sm'>"+subject+"</p>"+
+                "<p class='hidden-sm'>Hourly rate: $"+price+"</p>"+
+              "</div>"+
+            "</div>"+
+          "</div>"+
+        "</div>"+
+      "</div>");
   }
 
 
@@ -55,11 +57,8 @@ $(document).ready(function(){
   
     query.find({
       success: function(results){
-        //console.log("Successfully retrieved \n"+ JSON.stringify(results,null,2));
 
-
-        $('#results > tbody:last').html('');
-        $('#datadiv').html('<hr>');
+        $('#tutor-list').html('');
         for(var i=0;i<results.length;i++) 
         {
           display_tutor(results[i]);
@@ -78,12 +77,6 @@ $(document).ready(function(){
 
     query.find({
       success: function(results) {
-        //console.log("All tutors");
-        //console.log(results[i]['attributes']['Name']);  
-        //console.log(results[i]['attributes']['Subject']);
-        //console.log(results[i]['attributes']['email']);
-
-        $('#results > tbody:last').html('');
         for(var i=0;i<results.length;i++) display_tutor(results[i]);      
       }
     });
@@ -93,16 +86,13 @@ $(document).ready(function(){
   $('#autocomplete').keyup(function(){
     var searchText = $("#autocomplete").val();
     if(searchText !=" "){
-      console.log("#datadiv");
-      $("#datadiv .media-body").each(function(){
+      $("#tutor-list .media-body").each(function(){
         if ($(this).text().search(new RegExp(searchText, "i")) < 0) 
           {
-            $(this).fadeOut();
-            $(this).siblings().fadeOut();
+            $(this).parent().parent().parent().parent().hide();
           } 
         else{
-          $(this).show();
-          $(this).siblings().show();
+          $(this).parent().parent().parent().parent().show();
         }
       });
     }
@@ -132,19 +122,89 @@ $(document).ready(function(){
 
   private_browsing();
 
-  $("#results").stupidtable();
-  //highlight to show which column is being sorted 
-  $("#results th").click(function(){
-    $(this).siblings().removeClass("bg-success");
-    $(this).addClass("bg-success");
-  });
-
   //fix the header floating bugs
 // iOS check...ugly but necessary
+document.body.addEventListener('touchmove', function(e) {
+  // This prevents native scrolling from happening.
+  e.preventDefault();
+}, false);
+
+Scroller = function(element) {
+  this.element = this;
+  this.startTouchY = 0;
+  this.animateTo(0);
+
+  element.addEventListener('touchstart', this, false);
+  element.addEventListener('touchmove', this, false);
+  element.addEventListener('touchend', this, false);
+}
+
+Scroller.prototype.handleEvent = function(e) {
+  switch (e.type) {
+    case "touchstart":
+      this.onTouchStart(e);
+      break;
+    case "touchmove":
+      this.onTouchMove(e);
+      break;
+    case "touchend":
+      this.onTouchEnd(e);
+      break;
+  }
+}
+
+Scroller.prototype.onTouchStart = function(e) {
+  // This will be shown in part 4.
+  this.stopMomentum();
+
+  this.startTouchY = e.touches[0].clientY;
+  this.contentStartOffsetY = this.contentOffsetY;
+}
+
+Scroller.prototype.onTouchMove = function(e) {
+  if (this.isDragging()) {
+    var currentY = e.touches[0].clientY;
+    var deltaY = currentY - this.startTouchY;
+    var newY = deltaY + this.contentStartOffsetY;
+    this.animateTo(newY);
+  }
+}
+
+Scroller.prototype.onTouchEnd = function(e) {
+  if (this.isDragging()) {
+    if (this.shouldStartMomentum()) {
+      // This will be shown in part 3.
+      this.doMomentum();
+    } else {
+      this.snapToBounds();
+    }
+  }
+}
+
+Scroller.prototype.animateTo = function(offsetY) {
+  this.contentOffsetY = offsetY;
+
+  // We use webkit-transforms with translate3d because these animations
+  // will be hardware accelerated, and therefore significantly faster
+  // than changing the top value.
+  this.element.style.webkitTransform = 'translate3d(0,'+ offsetY + 'px, 0)';
+}
 
 
+
+
+  //so it will notice dynamically added elements also
+  $(document).on("click", ".tutor-link", function(){
+    var name = $(this).find('h4').text();
+    location.href="./tutor_profile.html#"+name;
+  });
+
+  $(document).on("click", "#homenav", function(){
+    location.href= "./index.html";
+  });
 
   
+ 
 
  
 });

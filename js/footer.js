@@ -1,12 +1,14 @@
-document.write("<div id='footer'>"+
+document.write("</div>"+
+  "<div id='footer'>"+
+     "<div class=”BOTTOM_TOOLBAR”>"+
       "<div class='col-xs-12 navbar-inverse navbar-fixed-bottom'>"+
         "<div class='row' id='bottomNav'>"+
-          "<div class='col-xs-4 text-center'><a href='./index.html'><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+
-          "<div class='col-xs-4 text-center'><a href='#profile'><i class='glyphicon glyphicon-pencil'></i><br>Review</a></div>"+
-          "<div class='col-xs-4 text-center'><a href='#'><i class='glyphicon glyphicon-envelope'></i><br>Contact</a></div>"+
+          "<div  class='col-xs-12 text-center'><a id='homenav' href=''><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+
+          //"<div class='col-xs-4 text-center'><a href='#profile'><i class='glyphicon glyphicon-pencil'></i><br>Review</a></div>"+
+         // "<div class='col-xs-4 text-center'><a href='#'><i class='glyphicon glyphicon-envelope'></i><br>Contact</a></div>"+
         "</div>"+
       "</div>"+
-        
+      "</div>"+
     "</div>"+
 
 
@@ -20,7 +22,6 @@ document.write("<div id='footer'>"+
 
     "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js'></script>"+
     "<script src='https://www.parsecdn.com/js/parse-1.2.18.min.js'></script>"+
-
     "<script type='text/javascript'>"+
       "Parse.initialize('BBCxw8FVvBLvQ2cB0PJps6RXN9b7u8Z3Az0eiN8s', '85eYU1NUhGrjwUI2CsswSxnFNm7JawMWHyesP11F');"+
     "</script>"+
