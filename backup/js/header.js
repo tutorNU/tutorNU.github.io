@@ -26,7 +26,7 @@ document.write(
   "</head>"+
   
   "<body>"+
-    "<div data-position='fixed' id='header' class='navbar navbar-inverse navbar-fixed-top'>"+
+    "<div data-role='header' data-position='fixed' id='header' class='navbar navbar-inverse navbar-fixed-top'>"+
       "<div class='container'>"+
       "<div class='input-group' id='searchfield'>"+
         "<span class='input-group-addon'><span class='glyphicon glyphicon-search'></span></span>"+
