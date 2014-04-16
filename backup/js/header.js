@@ -8,7 +8,7 @@ document.write(
     "<meta name='apple-mobile-web-app-capable' content='yes'>"+
     "<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>"+
     "<link rel='shortcut icon' href='./assets/favicon.ico'>"+
-
+    "<src = 'js/jquery.mobile-1.4.2.min.js'>"+
     "<link rel='shortcut icon' sizes='128x128' href='./icons/android/artwork-512.png'>"+
     "<link rel='shortcut icon' sizes='196x196' href='./icons/android/artwork-512.png'>"+
 
