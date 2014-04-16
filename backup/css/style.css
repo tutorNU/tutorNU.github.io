@@ -1,0 +1,39 @@
+body {padding-top:80px;}
+
+.navbar{height:80px;}
+
+
+.navbar-inverse{background-color: #520063;}
+
+#content{margin-top:50px;padding:0 15px;margin-bottom:50px;}
+
+/*margin:top right bottom left;*/
+#searchfield {margin:30px auto 20px; outline:none;}
+
+#outputcontent{text-align:center;}
+
+#autocomplete{outline:none;}
+
+#tutor-list{margin-top:-40px;}
+
+#tutor-list a{text-decoration: none;color:inherit;}
+
+.tutor-link{border-bottom:1px solid #CCCCCC;}
+.tutor-link:active{background-color: #DCDCDC;}
+.tutor-link .col-sm-2{padding:20px;}
+
+.navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
+
+.col-xs-4{padding:8px 0px;}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
