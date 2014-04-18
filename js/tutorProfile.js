@@ -38,15 +38,15 @@ $(document).ready(function(){
    		//<span class='glyphicon glyphicon-chevron-left'></span> <--back button
 			$('#header .container').html("<center><h3>"+name+"</h3></center>");
 
-			$('#aboutbar').html(name.split(' ')[0]);
+			$('#aboutname').html(name.split(' ')[0]);
 			$('#major').html(major);
 			$('#year').html(year);
 			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Hello "+name.split(' ')[0]+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about _____.  Would it be possible for us to meet and talk specifics?' target='_blank'>Send "+name.split(' ')[0]+" an email!</span></a>");
-			for(var i=0;i<subjects.length;i++) $('#info ul').append("<li>"+subjects[i]+"</li>");
+			for(var i=0;i<subjects.length;i++) $('#skills ul').append("<li>"+subjects[i]+"</li>");
 			for(var i=0;i<rating.length;i++){$('#reviews').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
 
 
-			$('#profileTabs a').click(function(e){
+			$('#profile_tabs a').click(function(e){
   				e.preventDefault();
   				$(this).tab('show');
 			});

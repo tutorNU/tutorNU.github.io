@@ -1,24 +1,15 @@
 #header .container{color:white;}
 
 .navbar h3{margin-top:40px;}
-#profile-top{
-	width:100%;
-	height:20%;
-}
+#profile-top div{border:0px solid black;}
 
-#profile-bottom{
-	width:100%;
-	margin:0px;
-	margin-top:-20px;
-}
+#profile-bottom{border:0px solid black;width:100%;height:250px;}
+
+#profpic{width:100%;}
 
 .back{
 	cursor:pointer;
 	color:white;
 }
 
-.tab-pane{padding:4%;}
-
-#profpic{width:30%;float:left;}
-
-#aboutbox{float:right;width:65%;height:30%;margin-top:-20px;}
+/*.tab-pane{padding:4%;}
