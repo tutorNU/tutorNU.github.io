@@ -33,7 +33,7 @@ $(document).ready(function(){
    			email= results[0]['attributes']['email'];
    			year = results[0]['attributes']['Year'];
    			rating = results[0]['attributes']['Rating']; 
-        questions= results[0]['attributes']['Questions'];
+        questions= results[0]['attributes']['Question'];
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
    		}
@@ -50,12 +50,7 @@ $(document).ready(function(){
       $('#questions .panel-body').html(questions);
       $('#availability .panel-body').html(availability);
       $('#experience .panel-body').html(experience);
-
-			$('#profile_tabs a').click(function(e){
-  				e.preventDefault();
-  				$(this).tab('show');
-			});
-		},
+  		},
 
 		error: function(err){
       	$('#header .container').html("<center><h3>Error</h3></center>");
