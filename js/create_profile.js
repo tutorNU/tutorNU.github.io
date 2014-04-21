@@ -46,9 +46,9 @@ $(document).ready(function(){
 	document.getElementById("SUBJECT").value = "Game Design"
 	document.getElementById("MAJOR").value = "Computer Science"
 	document.getElementById("YEAR").value = "Junior"
-	document.getElementById("AVAIL").value = "free on Monday from 2:00pm to 5:00pm, Tuesday from 12:00pm to 2:00pm, Friday 10:00am to 12:00pm";
-	document.getElementById("EXP").value ="Highly experienced in iOS game development";
-	document.getElementById("Ques").value = "Do you have any mobile development experience?";
+	document.getElementById("AVAIL").value = "Free on Monday from 2:00pm to 5:00pm, Tuesday from 12:00pm to 2:00pm, Friday 10:00am to 12:00pm";
+	document.getElementById("EXP").value ="TA for Professor Horswill, did some math tutoring in high school.";
+	document.getElementById("Ques").value = "What previous experience do you have? What is your goal for learning this skill?";
    })
 	
 });
