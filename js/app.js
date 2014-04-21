@@ -141,6 +141,10 @@ $(document).ready(function(){
     location.href= "./index.html";
   });
 
+  $(document).on("click", "#createprof", function(){
+    location.href= "./create_profile.html";
+  });
+
   
  
 

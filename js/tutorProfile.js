@@ -33,6 +33,9 @@ $(document).ready(function(){
    			email= results[0]['attributes']['email'];
    			year = results[0]['attributes']['Year'];
    			rating = results[0]['attributes']['Rating']; 
+        questions= results[0]['attributes']['Questions'];
+        availability = results[0]['attributes']['Availability'];
+        experience = results[0]['attributes']['Experience']; 
    		}
 
    		//<span class='glyphicon glyphicon-chevron-left'></span> <--back button
@@ -44,7 +47,9 @@ $(document).ready(function(){
 			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Hello "+name.split(' ')[0]+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about _____.  Would it be possible for us to meet and talk specifics?' target='_blank'>Send "+name.split(' ')[0]+" an email!</span></a>");
 			for(var i=0;i<subjects.length;i++) $('#skills .panel-body ul').append("<li>"+subjects[i]+"</li>");
 			for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
-
+      $('#questions .panel-body').html(questions);
+      $('#availability .panel-body').html(availability);
+      $('#experience .panel-body').html(experience);
 
 			$('#profile_tabs a').click(function(e){
   				e.preventDefault();

@@ -3,8 +3,8 @@ document.write("</div>"+
     
       "<div class='col-xs-12 navbar-inverse navbar-fixed-bottom'>"+
         "<div class='row' id='bottomNav'>"+
-          "<div  class='col-xs-12 text-center'><a id='homenav' href=''><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+
-          //"<div class='col-xs-4 text-center'><a href='#profile'><i class='glyphicon glyphicon-pencil'></i><br>Review</a></div>"+
+          "<div  class='col-xs-6 text-center'><a id='homenav' href=''><i class='glyphicon glyphicon-home'></i><br>Home</a></div>"+
+          "<div class='col-xs-6 text-center'><a id='createprof' href=''><i class='glyphicon glyphicon-pencil'></i><br>Post</a></div>"+
          // "<div class='col-xs-4 text-center'><a href='#'><i class='glyphicon glyphicon-envelope'></i><br>Contact</a></div>"+
         "</div>"+
       "</div>"+
