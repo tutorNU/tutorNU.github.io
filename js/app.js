@@ -11,6 +11,7 @@ $(document).ready(function(){
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
 
+
   /*optionsQuery.find({
     success: function(results){
       var suggestion = [];
@@ -74,6 +75,7 @@ $(document).ready(function(){
   function display_all_data()
   {
     var query = new Parse.Query(tutorDB);
+    query.descending("createdAt");
 
     query.find({
       success: function(results) {

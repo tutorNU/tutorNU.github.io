@@ -4,14 +4,14 @@
     <script type="text/javascript" src="./js/header.js"></script>
     <link href="./css/tutorProfile.css" rel="stylesheet">
 
-    <div class="row" id="profile-top" style="border:0px solid black;">
+    <div class="row" id="profile-top">
 
       <div class="col-xs-3">
         <img id="profpic" class="img-circle" src="./placeholder.png" />
       </div>
 
       <div class="col-xs-9">
-        <div class="panel panel-default">
+        <div class="panel panel-info">
           <div class="panel-heading">
             <h3 class="panel-title">About <span id="aboutname"></span></h3>
           </div>
@@ -24,7 +24,77 @@
     </div>
 
     <div id="profile-bottom">
-      <ul class="nav nav-pills" id="profile_tabs">
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#skills">
+          Skills
+        </a>
+      </h4>
+    </div>
+    <div id="skills" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#reviews">
+          Reviews
+        </a>
+      </h4>
+    </div>
+    <div id="reviews" class="panel-collapse collapse">
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#questions">
+          Questions
+        </a>
+      </h4>
+    </div>
+    <div id="questions" class="panel-collapse collapse">
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#availability">
+          Availability
+        </a>
+      </h4>
+    </div>
+    <div id="availability" class="panel-collapse collapse">
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#experience">
+          Experience
+        </a>
+      </h4>
+    </div>
+    <div id="experience" class="panel-collapse collapse">
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+</div>
+<!--       <ul class="nav nav-pills" id="profile_tabs">
         <li class="active"><a href="#skills">Skills</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#questions">Questions</a></li>
@@ -44,7 +114,7 @@
             </div>
             <div class="tab-pane" id="experience">
             </div>
-          </div>
+          </div> -->
     </div>
 
 
