@@ -13,7 +13,6 @@ $(document).ready(function(){
 		var availablity= document.getElementById("AVAIL").value;
 		var experience = document.getElementById("EXP").value;
 		var question = document.getElementById("Ques").value;
-		var rating = [{"grade":"","review":"","who":""}];
 
 		var Tutor = Parse.Object.extend("tutor"); 
 		var tutor = new Tutor();
@@ -25,7 +24,6 @@ $(document).ready(function(){
 			Subject: subject,
 			Year: year,
 			major: major,
-			Rating:rating,
 			Availability : availablity,
 			Experience : experience,
 			Question: question
