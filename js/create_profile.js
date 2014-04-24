@@ -14,6 +14,7 @@ $(document).ready(function(){
 		var availablity = $('#AVAIL').val();
 		var experience = $('#EXP').val();
 		var Class = $('#class').val();
+	  
 		var rating = [{"grade":"","review":"","who":""}];
 
 
