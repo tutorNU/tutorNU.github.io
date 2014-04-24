@@ -33,7 +33,7 @@ $(document).ready(function(){
    			email= results[0]['attributes']['email'];
    			year = results[0]['attributes']['Year'];
    			rating = results[0]['attributes']['Rating']; 
-        questions= results[0]['attributes']['Question'];
+        classes= results[0]['attributes']['Classes'];
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
    		}
@@ -46,8 +46,12 @@ $(document).ready(function(){
 			$('#year').html(year);
 			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Hello "+name.split(' ')[0]+",%0D%0A%0D%0AI found your information on tutorNU and I am interested in learning more about _____.  Would it be possible for us to meet and talk specifics?' target='_blank'>Send "+name.split(' ')[0]+" an email!</span></a>");
 			for(var i=0;i<subjects.length;i++) $('#skills .panel-body ul').append("<li>"+subjects[i]+"</li>");
-			for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
-      $('#questions .panel-body').html(questions);
+			if(rating)
+      {
+        for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
+      }
+      else $('#reviews .panel-body').html("<b>No reviews yet.</b>");
+      $('#classes .panel-body').html(classes);
       $('#availability .panel-body').html(availability);
       $('#experience .panel-body').html(experience);
   		},

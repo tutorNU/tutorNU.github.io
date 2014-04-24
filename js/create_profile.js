@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
+
 		var Name = $('#NAME').val();
 		var rate = $('#rate').val();
 		var email = $('#EMAIL').val();
@@ -15,6 +16,7 @@ $(document).ready(function(){
 		var Class = $('#class').val();
 		var rating = [{"grade":"","review":"","who":""}];
 
+
 		var Tutor = Parse.Object.extend("tutor"); 
 		var tutor = new Tutor();
 
@@ -25,7 +27,6 @@ $(document).ready(function(){
 			Subject: subject,
 			Year: year,
 			major: major,
-			Rating:rating,
 			Availability : availablity,
 			Experience : experience,
 			Classes: Class
