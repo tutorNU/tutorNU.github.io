@@ -3,7 +3,7 @@
 	<head>
  		<script type="text/javascript" src="./js/header.js"></script>
   		<style type="text/css">
-  			#AVAIL, #EXP, #Ques{height:100px;}
+  			#AVAIL, #EXP, {height:100px;}
   			#header .container{color:white;}
   			.navbar h3{margin-top:40px;}
   			#enter_info{margin-top:-20px;}
@@ -40,6 +40,12 @@
   			<input type="text" class="form-control" id="rate">
   		</div>
 	</div>
+  
+   <div class="form-group">
+    <label for="exampleInputtext1">Classes</label>
+    <input type="text" class="form-control" id="class" placeholder="Northwestern Classes">
+  </div>
+
   <div class="form-group">
     <label for="exampleInputtext1">Availability</label>
     <textarea class="form-control" id="AVAIL" placeholder="Please provide some general times you may be able to meet."></textarea>
@@ -48,10 +54,7 @@
     <label for="exampleInputtext1">Tutoring Experience</label>
     <textarea class="form-control" id="EXP" placeholder="Please enter any previous tutoring experience."></textarea>
   </div>
-  <div class="form-group">
-    <label for="exampleInputtext1">Questions for students</label>
-    <textarea class="form-control" id="Ques" placeholder="You may use this field to specify any questions you'd like prospective students to answer about what they are looking for in a tutor."></textarea>
-  </div>
+ 
   <center><button id="submit" type="button" class="btn btn-primary btn-lg">Post!</button></center>
 </form>
 

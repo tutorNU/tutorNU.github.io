@@ -4,15 +4,15 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
-		var Name = document.getElementById("NAME").value;
-		var rate = document.getElementById("rate").value;
-		var email = document.getElementById("EMAIL").value;
-		var subject = document.getElementById("SUBJECT").value;
-		var major = document.getElementById("MAJOR").value;
-		var year = document.getElementById("YEAR").value;
-		var availablity= document.getElementById("AVAIL").value;
-		var experience = document.getElementById("EXP").value;
-		var question = document.getElementById("Ques").value;
+		var Name = $('#NAME').val();
+		var rate = $('#rate').val();
+		var email = $('#EMAIL').val();
+		var subject = $('#SUBJECT').val();
+		var major = $('#MAJOR').val();
+		var year = $('#YEAR').val();
+		var availablity = $('#AVAIL').val();
+		var experience = $('#EXP').val();
+		var Class = $('#class').val();
 		var rating = [{"grade":"","review":"","who":""}];
 
 		var Tutor = Parse.Object.extend("tutor"); 
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			Rating:rating,
 			Availability : availablity,
 			Experience : experience,
-			Question: question
+			Classes: Class
 			}, 
 			{
   			success: function(tutor) {
