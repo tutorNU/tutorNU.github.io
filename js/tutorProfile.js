@@ -33,7 +33,7 @@ $(document).ready(function(){
    			email= results[0]['attributes']['email'];
    			year = results[0]['attributes']['Year'];
    			rating = results[0]['attributes']['Rating']; 
-        questions= results[0]['attributes']['Question'];
+        classes= results[0]['attributes']['Classes'];
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
    		}
@@ -51,7 +51,7 @@ $(document).ready(function(){
         for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
       }
       else $('#reviews .panel-body').html("<b>No reviews yet.</b>");
-      $('#questions .panel-body').html(questions);
+      $('#classes .panel-body').html(classes);
       $('#availability .panel-body').html(availability);
       $('#experience .panel-body').html(experience);
   		},
