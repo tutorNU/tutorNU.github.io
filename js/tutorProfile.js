@@ -47,21 +47,26 @@ $(document).ready(function(){
 			$('#aboutname').html(name.split(' ')[0]);
 			$('#major').html(major);
 			$('#year').html(year);
+      if(!questions) questions = "No questions.";
 			$('#email').html("<a href='mailto:tutor@gmail.com?Subject=Tutoring&body=Dear Student,%0D%0A%0D%0AThank you for your interest in my tutoring services. Please answer the questions below to help me better understand what you are looking for."+
-        "%0D%0A%0D%0A"+questions+"%0D%0A%0D%0A-"+name.split(' ')[0]+"%0D%0A%0D%0A===========================================================' target='_blank'>Send "+
+        "%0D%0A%0D%0A"+  questions  +"%0D%0A%0D%0A-"+name.split(' ')[0]+"%0D%0A%0D%0A===========================================================' target='_blank'>Send "+
           name.split(' ')[0]+
           " an email!</span></a>");
 
-			for(var i=0;i<subjects.length;i++) $('#skills .panel-body ul').append("<li>"+subjects[i]+"</li>");
-			if(rating)
-      {
-        for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
-      }
+			if(subjects) for(var i=0;i<subjects.length;i++) $('#skills .panel-body ul').append("<li>"+subjects[i]+"</li>");
+      else $('#skills .panel-body').html("No subjects listed.");
+
+			if(rating) for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
       else $('#reviews .panel-body').html("<b>No reviews yet.</b>");
 
-      $('#class .panel-body').html(classes);
-      $('#availability .panel-body').html(availability);
-      $('#experience .panel-body').html(experience);
+      if(classes) $('#class .panel-body').html(classes);
+      else $('#class .panel-body').html("<b>No classes listed.</b>");
+
+      if(availability) $('#availability .panel-body').html(availability); 
+      else $('#availability .panel-body').html("<b>No availability given.</b>");
+
+      if(experience) $('#experience .panel-body').html(experience);
+      else $('#experience .panel-body').html("<b>No experience provided.</b>");
   		},
 
 		error: function(err){
