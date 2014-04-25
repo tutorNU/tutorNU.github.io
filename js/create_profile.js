@@ -18,10 +18,22 @@ $(document).ready(function(){
 
 
 		//validation
-		if(email==""){
+		if(Name==""){
+			alert("Please enter your name.");
+			return;
+		} 	
+		else if(email==""){
 			alert("Please enter a valid email address.");
 			return;
-		} 
+		}
+		else if(subject==""){
+			alert("Please enter at least one subject.");
+			return;
+		}	
+		else if(rate==""){
+			alert("Please enter a desired hourly rate.")
+		}	 
+
 
 
 		var Tutor = Parse.Object.extend("tutor"); 
