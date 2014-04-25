@@ -14,7 +14,7 @@ $(document).ready(function(){
 		var availablity = $('#AVAIL').val();
 		var experience = $('#EXP').val();
 		var Class = $('#class').val();
-	  
+	  	var questions = $('#Ques').val();
 		var rating = [{"grade":"","review":"","who":""}];
 
 
@@ -28,6 +28,7 @@ $(document).ready(function(){
 			Subject: subject,
 			Year: year,
 			major: major,
+			Question: questions,
 			Availability : availablity,
 			Experience : experience,
 			Classes: Class
@@ -52,6 +53,7 @@ $(document).ready(function(){
 	document.getElementById("YEAR").value = "Junior"
 	document.getElementById("AVAIL").value = "Free on Monday from 2:00pm to 5:00pm, Tuesday from 12:00pm to 2:00pm, Friday 10:00am to 12:00pm";
 	document.getElementById("EXP").value ="TA for Professor Horswill, did some math tutoring in high school.";
+	$('#Ques').val("What previous experience do you have? What is your ultimate goal for learning this skill?");
 	document.getElementById("class").value = "EECS 394";
    })
 	
