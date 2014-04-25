@@ -4,15 +4,19 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
-		var Name = document.getElementById("NAME").value;
-		var rate = document.getElementById("rate").value;
-		var email = document.getElementById("EMAIL").value;
-		var subject = document.getElementById("SUBJECT").value;
-		var major = document.getElementById("MAJOR").value;
-		var year = document.getElementById("YEAR").value;
-		var availablity= document.getElementById("AVAIL").value;
-		var experience = document.getElementById("EXP").value;
-		var question = document.getElementById("Ques").value;
+
+		var Name = $('#NAME').val();
+		var rate = $('#rate').val();
+		var email = $('#EMAIL').val();
+		var subject = $('#SUBJECT').val();
+		var major = $('#MAJOR').val();
+		var year = $('#YEAR').val();
+		var availablity = $('#AVAIL').val();
+		var experience = $('#EXP').val();
+		var Class = $('#class').val();
+	  
+		var rating = [{"grade":"","review":"","who":""}];
+
 
 		var Tutor = Parse.Object.extend("tutor"); 
 		var tutor = new Tutor();
@@ -26,7 +30,7 @@ $(document).ready(function(){
 			major: major,
 			Availability : availablity,
 			Experience : experience,
-			Question: question
+			Classes: Class
 			}, 
 			{
   			success: function(tutor) {
@@ -48,7 +52,7 @@ $(document).ready(function(){
 	document.getElementById("YEAR").value = "Junior"
 	document.getElementById("AVAIL").value = "Free on Monday from 2:00pm to 5:00pm, Tuesday from 12:00pm to 2:00pm, Friday 10:00am to 12:00pm";
 	document.getElementById("EXP").value ="TA for Professor Horswill, did some math tutoring in high school.";
-	document.getElementById("Ques").value = "What previous experience do you have? What is your goal for learning this skill?";
+	document.getElementById("class").value = "EECS 394";
    })
 	
 });

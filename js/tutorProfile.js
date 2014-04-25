@@ -20,22 +20,25 @@ $(document).ready(function(){
    	success: function(results){
    		//fill in default person for development
    		var name = "John Smith"; 
-    		var major = "Finance";
+    	var major = "Finance";
    		var subjects = ["Econometrics"];
    		var email = "johnsmith@gmail.com";
-   		var year = "Senior";
+   		var classes = "EECS 110";
+      var year = "Senior";
    		var rating= [{grade:4.3,review:"John is a decent tutor, but he goes too fast sometimes.", who:"Tim"}];
-
+      
    		if(results[0]){
    			name = results[0]['attributes']['Name'];
    			major = results[0]['attributes']['major'];
    			subjects = [results[0]['attributes']['Subject']];
    			email= results[0]['attributes']['email'];
    			year = results[0]['attributes']['Year'];
-   			rating = results[0]['attributes']['Rating']; 
-        questions= results[0]['attributes']['Question'];
+   			rating = results[0]['attributes']['Rating'];
+        questions = results[0]['attributes']['Question']; 
+        classes= results[0]['attributes']['Classes'];
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
+      
    		}
 
    		//<span class='glyphicon glyphicon-chevron-left'></span> <--back button
@@ -55,7 +58,8 @@ $(document).ready(function(){
         for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
       }
       else $('#reviews .panel-body').html("<b>No reviews yet.</b>");
-      //$('#questions .panel-body').html(questions);
+
+      $('#class .panel-body').html(classes);
       $('#availability .panel-body').html(availability);
       $('#experience .panel-body').html(experience);
   		},
