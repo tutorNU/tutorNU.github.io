@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
-
 		var Name = $('#NAME').val();
 		var rate = $('#rate').val();
 		var email = $('#EMAIL').val();
@@ -16,6 +15,13 @@ $(document).ready(function(){
 		var Class = $('#class').val();
 	  	var questions = $('#Ques').val();
 		var rating = [{"grade":"","review":"","who":""}];
+
+
+		//validation
+		if(email==""){
+			alert("Please enter a valid email address.");
+			return;
+		} 
 
 
 		var Tutor = Parse.Object.extend("tutor"); 
