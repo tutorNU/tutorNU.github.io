@@ -18,7 +18,7 @@ $(document).ready(function(){
 
    query.find({
    	success: function(results){
-   		fill in default person for development
+   		//fill in default person for development
    		var name = "John Smith"; 
     	var major = "Finance";
    		var subjects = ["Econometrics"];
