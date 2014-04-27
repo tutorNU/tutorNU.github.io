@@ -4,9 +4,20 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
+
+		if($('#password').val() ==""){
+			alert("please enter a password");
+			return ;
+
+	}
+	else{
+    
+
+
 		var Name = $('#NAME').val();
 		var rate = $('#rate').val();
 		var email = $('#EMAIL').val();
+		var password = $('#password').val();
 		var subject = $('#SUBJECT').val();
 		var major = $('#MAJOR').val();
 		var year = $('#YEAR').val();
@@ -42,6 +53,7 @@ $(document).ready(function(){
 		tutor.save({
 			Name: Name,
 			Rate: parseInt(rate),
+			password : password,
 			email: email,
 			Subject: subject,
 			Year: year,
@@ -50,6 +62,7 @@ $(document).ready(function(){
 			Availability : availablity,
 			Experience : experience,
 			Classes: Class
+
 			}, 
 			{
   			success: function(tutor) {
@@ -60,7 +73,8 @@ $(document).ready(function(){
     			// The save failed.
     			// error is a Parse.Error with an error code and description.
  	 		}
-		})
+			})
+		}
 	})
    $("#filler").click(function(){
    	document.getElementById("NAME").value = "Justin Reay";
@@ -74,5 +88,12 @@ $(document).ready(function(){
 	$('#Ques').val("What previous experience do you have? What is your ultimate goal for learning this skill?");
 	document.getElementById("class").value = "EECS 394";
    })
+
+   $.fn.log = function() {
+  console.log.apply(console, this);
+  return this;
+};
+
+   
 	
 });

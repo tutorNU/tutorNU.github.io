@@ -5,7 +5,7 @@ $(document).ready(function(){
 	/*$(document).on("click", ".back", function(){
    	window.history.go(-1);
   	});*/
-
+  
 
 	var tutorDB = Parse.Object.extend("tutor");
    var query = new Parse.Query(tutorDB);
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
    		//<span class='glyphicon glyphicon-chevron-left'></span> <--back button
 			$('#header .container').html("<center><h3>"+name+"</h3></center>");
-
+     
 			$('#aboutname').html(name.split(' ')[0]);
 			$('#major').html(major);
 			$('#year').html(year);
@@ -74,5 +74,27 @@ $(document).ready(function(){
     	}
 
    });
+
+$('#edit').click(function(){
+  $.prompt("Enter your Password:", function(result) {
+  if (result) {
+    var name = 
+    var Tutor = Parse.Object.extend("tutor");
+    var query = new Parse.Query(Tutor);
+    query.equalTo("password", result);
+    // var query1 = new Parse.Query(tutor);
+   
+    query.find({
+  success: function(results) {
+    alert("correct password");
+
+  },
+  error: function(error) {
+    alert("wrong password");
+  }
+});
+  }
+});
+})
 
 });
