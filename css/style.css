@@ -1,3 +1,5 @@
+html{font-family: Helvetica;}
+
 body {padding-top:80px;}
 
 .navbar{height:80px;}
@@ -5,7 +7,7 @@ body {padding-top:80px;}
 
 .navbar-inverse{background-color: #520063;}
 
-#content{margin-top:50px;padding:0 15px;margin-bottom:50px;}
+#content{padding:0 15px;margin-bottom:50px;overflow:hidden;}
 
 /*margin:top right bottom left;*/
 #searchfield {margin:30px auto 20px; outline:none;}
@@ -14,13 +16,15 @@ body {padding-top:80px;}
 
 #autocomplete{outline:none;}
 
-#tutor-list{margin-top:-40px;}
+#tutor-list{}
 
 #tutor-list a{text-decoration: none;color:inherit;}
 
+.pricebox{width:30px;height:30px;font-size:1.2em;font-weight:bold;color:#520063;margin-right: 100px;}
+
 .tutor-link{border-bottom:1px solid #CCCCCC;}
 .tutor-link:active{background-color: #DCDCDC;}
-.tutor-link .col-sm-2{padding:20px;}
+.tutor-link .col-sm-2{padding:10px;}
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
 
