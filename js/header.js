@@ -20,6 +20,7 @@ document.write(
     "<link rel='apple-touch-startup-image' href='./startup-image.png'>"+
 
     "<link href='./css/bootstrap.min.css' rel='stylesheet'>"+
+    "<link href='./css/editable-form.css' rel='stylesheet'>"+
 
     "<link href='./css/style.css' rel='stylesheet'>"+
     "<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js'></script>"+

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('#header .container').html('');
-
+  
+  var Email = "";
 
 	/*$(document).on("click", ".back", function(){
    	window.history.go(-1);
@@ -8,7 +9,7 @@ $(document).ready(function(){
   
 
 	var tutorDB = Parse.Object.extend("tutor");
-   var query = new Parse.Query(tutorDB);
+  var query = new Parse.Query(tutorDB);
 
 	var url = location.href;
 
@@ -26,7 +27,9 @@ $(document).ready(function(){
    		var classes = "EECS 110";
       var year = "Senior";
    		var rating= [{grade:4.3,review:"John is a decent tutor, but he goes too fast sometimes.", who:"Tim"}];
-      
+      var questions = "";
+      var password ="johnsmith";
+
    		if(results[0]){
    			name = results[0]['attributes']['Name'];
    			major = results[0]['attributes']['major'];
@@ -38,9 +41,10 @@ $(document).ready(function(){
         classes= results[0]['attributes']['Classes'];
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
-      
+        password = results[0]['attributes']['password'];
+        Email = email;
    		}
-
+      
    		//<span class='glyphicon glyphicon-chevron-left'></span> <--back button
 			$('#header .container').html("<center><h3>"+name+"</h3></center>");
      
@@ -75,26 +79,53 @@ $(document).ready(function(){
 
    });
 
-$('#edit').click(function(){
-  $.prompt("Enter your Password:", function(result) {
-  if (result) {
-    var name = 
-    var Tutor = Parse.Object.extend("tutor");
-    var query = new Parse.Query(Tutor);
-    query.equalTo("password", result);
+ $('#edit').click(function(){
+  var password = prompt("Please enter your password");
+  
+  var Tutor = Parse.Object.extend("tutor");
+  var query = new Parse.Query(Tutor);
+  console.log(password);
+  console.log(Email);
+  query.equalTo("pwd", password);
+  query.equalTo("email", Email);
     // var query1 = new Parse.Query(tutor);
-   
+
     query.find({
   success: function(results) {
     alert("correct password");
+    //fill in default person for development
+      var name = ""; 
+      var major = "Finance";
+      var subjects = ["Econometrics"];
+      var email = "";
+      var classes = "EECS 110";
+      var year = "Senior";
+      var rating= [{grade:4.3,review:"John is a decent tutor, but he goes too fast sometimes.", who:"Tim"}];
+      var password ="johnsmith";
+    if(results[0]){
 
+
+        name = results[0]['attributes']['Name'];
+        major = results[0]['attributes']['major'];
+        subjects = [results[0]['attributes']['Subject']];
+        email= results[0]['attributes']['email'];
+        year = results[0]['attributes']['Year'];
+        rating = results[0]['attributes']['Rating'];
+        questions = results[0]['attributes']['Question']; 
+        classes= results[0]['attributes']['Classes'];
+        availability = results[0]['attributes']['Availability'];
+        experience = results[0]['attributes']['Experience']; 
+        password = results[0]['attributes']['pwd'];
+      }
+      console.log(name);
+      console.log(email);
   },
   error: function(error) {
     alert("wrong password");
   }
 });
-  }
+  
 });
-})
+
 
 });
