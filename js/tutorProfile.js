@@ -79,6 +79,8 @@ $(document).ready(function(){
 
    });
 
+
+
  $('#edit').click(function(){
   var password = prompt("Please enter your password");
   
@@ -86,46 +88,43 @@ $(document).ready(function(){
   var query = new Parse.Query(Tutor);
   console.log(password);
   console.log(Email);
-  query.equalTo("pwd", password);
   query.equalTo("email", Email);
+  query.equalTo("pwd", password);
+  
     // var query1 = new Parse.Query(tutor);
 
     query.find({
   success: function(results) {
-    alert("correct password");
-    //fill in default person for development
-      var name = ""; 
-      var major = "Finance";
-      var subjects = ["Econometrics"];
-      var email = "";
-      var classes = "EECS 110";
-      var year = "Senior";
-      var rating= [{grade:4.3,review:"John is a decent tutor, but he goes too fast sometimes.", who:"Tim"}];
-      var password ="johnsmith";
-    if(results[0]){
-
-
-        name = results[0]['attributes']['Name'];
-        major = results[0]['attributes']['major'];
-        subjects = [results[0]['attributes']['Subject']];
-        email= results[0]['attributes']['email'];
-        year = results[0]['attributes']['Year'];
-        rating = results[0]['attributes']['Rating'];
-        questions = results[0]['attributes']['Question']; 
-        classes= results[0]['attributes']['Classes'];
-        availability = results[0]['attributes']['Availability'];
-        experience = results[0]['attributes']['Experience']; 
-        password = results[0]['attributes']['pwd'];
+       if(results[0]['attributes']['email']== Email &&
+        results[0]['attributes']['pwd'] == password){
+        name_ = results[0]['attributes']['Name'];
+        major_ = results[0]['attributes']['major'];
+        subjects_ = [results[0]['attributes']['Subject']];
+        email_= results[0]['attributes']['email'];
+        year_ = results[0]['attributes']['Year'];
+        rating_ = results[0]['attributes']['Rating'];
+        questions_ = results[0]['attributes']['Question']; 
+        classes_= results[0]['attributes']['Classes'];
+        availability_ = results[0]['attributes']['Availability'];
+        experience_= results[0]['attributes']['Experience']; 
+        password_ = results[0]['attributes']['pwd'];
       }
-      console.log(name);
-      console.log(email);
+    
+    console.log(name);
+    console.log(major);
+    console.log(subjects);
+    console.log(password);
   },
   error: function(error) {
-    alert("wrong password");
+    console.log("wrong password");
   }
 });
+location.href = 'https://tutorNU.github.io/edit_profile.html';
+
+});
+
+
   
-});
-
 
 });
+

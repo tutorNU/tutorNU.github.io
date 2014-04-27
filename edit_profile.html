@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+ 		<script type="text/javascript" src="./js/header.js"></script>
+  		<style type="text/css">
+  			#AVAIL, #EXP, {height:100px;}
+  			#header .container{color:white;}
+  			.navbar h3{margin-top:40px;}
+  			#enter_info{}
+  			#submit{width:50%;}
+  		</style>
+<!--===========================================================================-->
+
+<form role="form" id="enter_info">
+  <div class="form-group">
+    <label for="exampleInputtext1">Name</label>
+    <input type="text" class="form-control" id="NAME" placeholder="Full name">
+  </div>
+
+    <div class="form-group"  >
+     <label for="exampleInputtext1" >Password</label>
+     <input  id="password" type="text" class="form-control" placeholder="you use this password to edit your profile">
+ </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputtext1">Year (i.e. Senior, PhD, etc.)</label>
+    <input type="text" class="form-control" id="YEAR" placeholder="Please enter current year in school or otherwise.">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="EMAIL" placeholder="Enter email.">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputtext1">Major</label>
+    <input type="text" class="form-control" id="MAJOR" placeholder="Please enter one major.">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputtext1">Subject(s) with expertise</label>
+    <input type="text" class="form-control" id="SUBJECT" placeholder="Please separate by commas.">
+  </div>
+  
+
+
+   <div class="form-group">
+    <label for="exampleInputtext1">Classes</label>
+    <input type="text" class="form-control" id="class" placeholder="Classes taken at NU">
+  </div>
+
+  
+  <div class="form-group">
+  		<label for="exampleInputtext1">Rate (hourly)</label>
+  		<div class="input-group">
+  			<span class="input-group-addon">$</span>
+  			<input type="text" class="form-control" id="rate">
+  		</div>
+	</div>
+  
+
+  <div class="form-group">
+    <label for="exampleInputtext1">Availability</label>
+    <textarea class="form-control" id="AVAIL" placeholder="Please provide some general times you may be able to meet."></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputtext1">Tutoring Experience</label>
+    <textarea class="form-control" id="EXP" placeholder="Please enter any previous tutoring experience."></textarea>
+  </div>
+ <div class="form-group">
+     <label for="exampleInputtext1">Questions for students</label>
+     <textarea class="form-control" id="Ques" placeholder="You may use this field to specify any questions you'd like prospective students to answer about what they are looking for in a tutor."></textarea>
+ </div>
+
+
+
+
+ 
+  <center><button id="submit" type="button" class="btn btn-primary btn-lg">Save</button></center>
+</form>
+
+<!--===========================================================================-->
+  	<script type="text/javascript" src="./js/footer.js"></script>
+  <script type="text/javascript" src="./js/tutorProfile.js"></script>
+	<script type="text/javascript" src="./js/edit_profile.js"></script>
+  <script src="http://jquery.bassistance.de/validate/jquery.validate.js"></script>
+<script src="http://jquery.bassistance.de/validate/additional-methods.js"></script>
+  	
