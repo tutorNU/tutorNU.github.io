@@ -23,7 +23,7 @@ body {padding-top:80px;}
 .tutor-link .media-body{padding-left: 0px;}
 
 .pricebox{
-	font-size:1.5em;
+	font-size:1.3em;
 	font-weight:bold;
 	color:#520063;
 	position: relative;
@@ -34,7 +34,7 @@ body {padding-top:80px;}
 
 .tutor-link{border-bottom:1px solid #CCCCCC;}
 .tutor-link:active{background-color: #DCDCDC;}
-.tutor-link .col-sm-2{padding:10px;}
+.tutor-link .col-sm-2{padding:10px;padding-bottom:0px;}
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
 
