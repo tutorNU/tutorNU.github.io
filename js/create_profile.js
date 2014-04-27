@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
+
 		if($('#password').val() ==""){
 			alert("please enter a password");
 			return ;
@@ -11,6 +12,7 @@ $(document).ready(function(){
 	}
 	else{
     
+
 
 		var Name = $('#NAME').val();
 		var rate = $('#rate').val();
@@ -24,6 +26,25 @@ $(document).ready(function(){
 		var Class = $('#class').val();
 	  	var questions = $('#Ques').val();
 		var rating = [{"grade":"","review":"","who":""}];
+
+
+		//validation
+		if(Name==""){
+			alert("Please enter your name.");
+			return;
+		} 	
+		else if(email==""){
+			alert("Please enter a valid email address.");
+			return;
+		}
+		else if(subject==""){
+			alert("Please enter at least one subject.");
+			return;
+		}	
+		else if(rate==""){
+			alert("Please enter a desired hourly rate.")
+		}	 
+
 
 
 		var Tutor = Parse.Object.extend("tutor"); 
