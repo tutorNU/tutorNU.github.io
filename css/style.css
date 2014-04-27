@@ -20,11 +20,21 @@ body {padding-top:80px;}
 
 #tutor-list a{text-decoration: none;color:inherit;}
 
-.pricebox{width:30px;height:30px;font-size:1.2em;font-weight:bold;color:#520063;margin-right: 100px;}
+.tutor-link .media-body{padding-left: 0px;}
+
+.pricebox{
+	font-size:1.3em;
+	font-weight:bold;
+	color:#520063;
+	position: relative;
+	bottom:25px;
+	margin-right: 5%;
+
+}
 
 .tutor-link{border-bottom:1px solid #CCCCCC;}
 .tutor-link:active{background-color: #DCDCDC;}
-.tutor-link .col-sm-2{padding:10px;}
+.tutor-link .col-sm-2{padding:10px;padding-bottom:0px;}
 
 .navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
 

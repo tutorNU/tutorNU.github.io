@@ -29,8 +29,9 @@ $(document).ready(function(){
               "</div>"+
               "<div class='media-body  col-sm-7 col-md-8  '>"+
                 "<h4 class='media-heading'>"+name+"</h4>"+
-                "<p class='hidden-sm'>Major: "+major+"<span class='pricebox pull-right'>$"+price+"/hr</span>"+
-                "<br/>Subject: "+subject+"</p>"+
+                "<p class='hidden-sm'>Major: "+major+
+                "<br/>Subject: "+subject+
+                "<span class='pricebox pull-right'>$"+price+"/hr</span></p>"+
               "</div>"+
             "</div>"+
           "</div>"+
