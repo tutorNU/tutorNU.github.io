@@ -20,7 +20,12 @@ body {padding-top:80px;}
 
 #tutor-list a{text-decoration: none;color:inherit;}
 
-.pricebox{width:30px;height:30px;font-size:1.2em;font-weight:bold;color:#520063;}
+.pricebox{width:30px;height:30px;font-size:1.2em;font-weight:bold;color:#520063;
+position:relative;
+bottom:17px;
+
+
+}
 
 .tutor-link{border-bottom:1px solid #CCCCCC;}
 .tutor-link:active{background-color: #DCDCDC;}
