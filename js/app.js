@@ -26,12 +26,12 @@ $(document).ready(function(){
             "<div class='row'>"+
               "<div class='media-img  pull-left  col-sm-5  col-md-3'>"+
                 "<img src='./icons/artwork-source.png' alt='About'  width='45' height='45' />"+
-                "<br/><span class='pricebox'>$"+price+"/hr</span>"+
               "</div>"+
               "<div class='media-body  col-sm-7 col-md-8  '>"+
                 "<h4 class='media-heading'>"+name+"</h4>"+
                 "<p class='hidden-sm'>Major: "+major+
                 "<br/>Subject: "+subject+
+                "<span class='pricebox pull-right'>$"+price+"/hr</span></p>"+
               "</div>"+
             "</div>"+
           "</div>"+
