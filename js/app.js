@@ -10,19 +10,6 @@ $(document).ready(function(){
 
   var tutorDB = Parse.Object.extend("tutor");
   var tutorQuery = new Parse.Query(tutorDB);
-
-
-  /*optionsQuery.find({
-    success: function(results){
-      var suggestion = [];
-      for(var i=0;i<results.length;i++) suggestion.push(results[i]['attributes']['subject']);
-    
-    },
-    error: function(err){
-      console.log("failed query");
-    }
-
-  });*/
   
 
   function display_tutor(tutor)
@@ -31,6 +18,7 @@ $(document).ready(function(){
     var subject = tutor['attributes']['Subject'];
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
+    var major =  tutor['attributes']['major'];
 
     $('#tutor-list').append("<div class='tutor-link'>"+
         "<div class='row'>"+
@@ -47,7 +35,7 @@ $(document).ready(function(){
             "</div>"+
           "</div>"+
         "</div>"+
-      "</div>");
+      "</div>");  
   }
 
 
