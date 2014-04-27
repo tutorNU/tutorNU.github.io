@@ -53,7 +53,7 @@ $(document).ready(function(){
 		tutor.save({
 			Name: Name,
 			Rate: parseInt(rate),
-			password : password,
+			pwd : password,
 			email: email,
 			Subject: subject,
 			Year: year,
