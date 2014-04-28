@@ -118,17 +118,17 @@ $(document).ready(function(){
         console.log(major_);
         console.log(subjects_);
         console.log(password_);
-        $('#Name').html(name_);
-        $('#MAJOR').html(major_);
-        $('#SUBJECT').html(subjects_);
-        $('#EMAIL').html(email_);
-        $('#YEAR').html(year_);
-        $('#rate').html(rating_);
-        $('#Ques').html(questions_);
-        $('#class').html(classes_);
-        $('#AVAIL').html(availability_);
-        $('#EXP').html(experience_);
-        $('#password').html(password_);
+        $('#Name').val()=name_;
+        $('#MAJOR').val()=major_;
+        $('#SUBJECT').val()=subjects_;
+        $('#EMAIL').val()=email_;
+        $('#YEAR').val()=year_;
+        $('#rate').val()=rating_;
+        $('#Ques').val()=questions_;
+        $('#class').val()=classes_;
+        $('#AVAIL').val()=availability_;
+        $('#EXP').val()=experience_;
+        $('#password').val()=password_;
       }
      
     
