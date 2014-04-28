@@ -71,8 +71,8 @@ $(document).ready(function(){
       // if(availability) $('#availability .panel-body').html(availability); 
       // else $('#availability .panel-body').html("<b>No availability given.</b>");
 
-      if(experience) $('#experience .panel-body').html(experience);
-      else $('#experience .panel-body').html("<b>No experience provided.</b>");
+      // if(experience) $('#experience .panel-body').html(experience);
+      // else $('#experience .panel-body').html("<b>No experience provided.</b>");
   		},
 
 		error: function(err){
