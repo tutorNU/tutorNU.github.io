@@ -1,30 +1,23 @@
 $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
-    script = "https://github.com/tutorNU/tutorNU.github.io/blob/master/js/tutorProfile.js";
-	function require(script) {
-    $.ajax({
-        url: script,
-        dataType: "script",
-        async: false,           // <-- This is the key
-        success: function () {
-            console.log("success");
-            document.getElementById("NAME").value = _name_;
-   			document.getElementById("rate").value =_rating_;
-			document.getElementById("EMAIL").value = _email_;
-			document.getElementById("SUBJECT").value = _subjects_;
-			document.getElementById("MAJOR").value = _major_;
-			document.getElementById("YEAR").value = _year_;
-			document.getElementById("AVAIL").value = _availability_;
-			document.getElementById("EXP").value =_experience_;
-			document.getElementById("class").value = _classes_;
-        },
-        error: function () {
-            throw new Error("Could not load script " + script);
-        }
-    });
-}
-	require();
+    
+	$.getsScript( "ajax/tutorProfile.js",function(data,textStatus) {
+		console.log(data);
+        consloe.log(textStatus);
+   //          document.getElementById("NAME").value = _name_;
+   // 			document.getElementById("rate").value =_rating_;
+			// document.getElementById("EMAIL").value = _email_;
+			// document.getElementById("SUBJECT").value = _subjects_;
+			// document.getElementById("MAJOR").value = _major_;
+			// document.getElementById("YEAR").value = _year_;
+			// document.getElementById("AVAIL").value = _availability_;
+			// document.getElementById("EXP").value =_experience_;
+			// document.getElementById("class").value = _classes_;
+        }),
+        
+
+
     
 	
 	$("#submit").click(function(){
