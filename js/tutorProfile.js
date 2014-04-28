@@ -6,17 +6,17 @@ $(document).ready(function(){
 	/*$(document).on("click", ".back", function(){
    	window.history.go(-1);
   	});*/
-        _name_ = "";
-        _major_ = "";
-        _subjects_ = "";
-        _email_= "";
-        _year_ = "";
-        _rating_ = "";
-        _questions_ = "";
-        _classes_= "";
-        _availability_ =""; 
-        _experience_= "";
-        _password_ = "";
+       var _name_ = "";
+       var _major_ = "";
+       var _subjects_ = "";
+       var _email_= "";
+       var _year_ = "";
+       var _rating_ = "";
+       var _questions_ = "";
+       var _classes_= "";
+       var _availability_ =""; 
+       var _experience_= "";
+       var _password_ = "";
 
 	var tutorDB = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutorDB);
