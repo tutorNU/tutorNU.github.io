@@ -76,7 +76,7 @@ $(document).ready(function(){
 			})
 		}
 	})
-   $("#filler").click(function(){
+ 
    	document.getElementById("NAME").value = name_;
    	document.getElementById("rate").value =rating_;
 	document.getElementById("EMAIL").value = email_;
@@ -86,7 +86,7 @@ $(document).ready(function(){
 	document.getElementById("AVAIL").value = availability_;
 	document.getElementById("EXP").value =experience_;
 	document.getElementById("class").value = classes_;
-   })
+
 
    $.fn.log = function() {
   console.log.apply(console, this);
