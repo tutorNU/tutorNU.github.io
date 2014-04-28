@@ -19,8 +19,7 @@ document.write("</div>"+
 
     "<script type='text/javascript' src='./js/app.js'></script>"+
     "<script type='text/javascript' src='./js/stupidtable.js'></script>"+
-    "<script type='text/javascript' src='./js/editable-form-bootstrap.js'></script>"+
-    "<script type='text/javascript' src='./js/editable-form.js'></script>"+
+ 
     "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js'></script>"+
     "<script src='https://www.parsecdn.com/js/parse-1.2.18.min.js'></script>"+
     "<script type='text/javascript'>"+
