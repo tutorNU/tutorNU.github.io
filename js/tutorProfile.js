@@ -1,14 +1,4 @@
-       var _name_ = "";
-       var _major_ = "";
-       var _subjects_ = "";
-       var _email_= "";
-       var _year_ = "";
-       var _rating_ = "";
-       var _questions_ = "";
-       var _classes_= "";
-       var _availability_ =""; 
-       var _experience_= "";
-       var _password_ = "";
+
 
 $(document).ready(function(){
 	$('#header .container').html('');
@@ -121,17 +111,7 @@ $(document).ready(function(){
         experience_= results[0]['attributes']['Experience']; 
         password_ = results[0]['attributes']['pwd'];
       }
-        _name_=name_;
-        _major_ = major_;
-        _subjects_ = subjects_;
-        _email_= email_;
-        _year_ = year_;
-        _rating_ = rating_;
-        _questions_ = questions_;
-        _classes_= classes_;
-        _availability_ =availability_; 
-        _experience_= experience_;
-        _password_ = password_;
+     
     console.log(name_);
     console.log(major_);
     console.log(subjects_);

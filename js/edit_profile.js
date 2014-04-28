@@ -3,15 +3,7 @@ $(document).ready(function(){
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
     
 
-            $("#NAME").html(_name_);
-            $("#rate").html(_rating_);
-            $("#EMAIL").html(_email_);
-            $("#SUBJECT").html(_subjects_);
-            $("#MAJOR").html(_major_);
-            $("#YEAR").html(_year_);
-            $("#AVAIL").html(_availability_);
-            $("#EXP").html(_experience_);
-            $("#class").html(_classes_);
+          
 
   
  
