@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
-    script = "tutornu.github.io/js/tutorProfile.js";
+    script = "https://github.com/tutorNU/tutorNU.github.io/blob/master/js/tutorProfile.js";
 	function require(script) {
     $.ajax({
         url: script,
