@@ -110,16 +110,17 @@ $(document).ready(function(){
         password_ = results[0]['attributes']['pwd'];
       }
     
-    console.log(name);
-    console.log(major);
-    console.log(subjects);
-    console.log(password);
+    console.log(name_);
+    console.log(major_);
+    console.log(subjects_);
+    console.log(password_);
+    location.href = 'https://tutorNU.github.io/edit_profile.html';
   },
   error: function(error) {
     console.log("wrong password");
   }
 });
-location.href = 'https://tutorNU.github.io/edit_profile.html';
+
 
 });
 
