@@ -24,6 +24,7 @@ $(document).ready(function(){
         }
     });
 }
+	require();
     
 	
 	$("#submit").click(function(){
