@@ -1,11 +1,3 @@
-$(document).ready(function(){
-	$('#header .container').html('');
-  
-  var Email = "";
-
-	/*$(document).on("click", ".back", function(){
-   	window.history.go(-1);
-  	});*/
        var _name_ = "";
        var _major_ = "";
        var _subjects_ = "";
@@ -17,6 +9,16 @@ $(document).ready(function(){
        var _availability_ =""; 
        var _experience_= "";
        var _password_ = "";
+
+$(document).ready(function(){
+	$('#header .container').html('');
+  
+  var Email = "";
+
+	/*$(document).on("click", ".back", function(){
+   	window.history.go(-1);
+  	});*/
+       
 
 	var tutorDB = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutorDB);
