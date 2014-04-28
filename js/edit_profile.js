@@ -2,19 +2,19 @@ $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
     
-	$.getsScript( "ajax/tutorProfile.js",function(data,textStatus) {
-		console.log(data);
-        consloe.log(textStatus);
-   //          document.getElementById("NAME").value = _name_;
-   // 			document.getElementById("rate").value =_rating_;
-			// document.getElementById("EMAIL").value = _email_;
-			// document.getElementById("SUBJECT").value = _subjects_;
-			// document.getElementById("MAJOR").value = _major_;
-			// document.getElementById("YEAR").value = _year_;
-			// document.getElementById("AVAIL").value = _availability_;
-			// document.getElementById("EXP").value =_experience_;
-			// document.getElementById("class").value = _classes_;
-        }),
+
+            $("#NAME").html(_name_);
+            $("#rate").html(_rating_);
+            $("#EMAIL").html(_email_);
+            $("#SUBJECT").html(_subjects_);
+            $("#MAJOR").html(_major_);
+            $("#YEAR").html(_year_);
+            $("#AVAIL").html(_availability_);
+            $("#EXP").html(_experience_);
+            $("#class").html(_classes_);
+
+  
+ 
         
 
 
