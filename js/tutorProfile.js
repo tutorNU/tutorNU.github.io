@@ -6,7 +6,17 @@ $(document).ready(function(){
 	/*$(document).on("click", ".back", function(){
    	window.history.go(-1);
   	});*/
-  
+        _name_ = "";
+        _major_ = "";
+        _subjects_ = "";
+        _email_= "";
+        _year_ = "";
+        _rating_ = "";
+        _questions_ = "";
+        _classes_= "";
+        _availability_ =""; 
+        _experience_= "";
+        _password_ = "";
 
 	var tutorDB = Parse.Object.extend("tutor");
   var query = new Parse.Query(tutorDB);
@@ -109,7 +119,17 @@ $(document).ready(function(){
         experience_= results[0]['attributes']['Experience']; 
         password_ = results[0]['attributes']['pwd'];
       }
-    
+        _name_=name_;
+        _major_ = major_;
+        _subjects_ = subjects_;
+        _email_= email_;
+        _year_ = year_;
+        _rating_ = rating_;
+        _questions_ = questions_;
+        _classes_= classes_;
+        _availability_ =availability_; 
+        _experience_= experience_;
+        _password_ = password_;
     console.log(name_);
     console.log(major_);
     console.log(subjects_);

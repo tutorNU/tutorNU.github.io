@@ -1,15 +1,15 @@
 $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
-    document.getElementById("NAME").value = name_;
-   	document.getElementById("rate").value =rating_;
-	document.getElementById("EMAIL").value = email_;
-	document.getElementById("SUBJECT").value = subjects_;
-	document.getElementById("MAJOR").value = major_;
-	document.getElementById("YEAR").value = year_;
-	document.getElementById("AVAIL").value = availability_;
-	document.getElementById("EXP").value =experience_;
-	document.getElementById("class").value = classes_;
+    document.getElementById("NAME").value = _name_;
+   	document.getElementById("rate").value =_rating_;
+	document.getElementById("EMAIL").value = _email_;
+	document.getElementById("SUBJECT").value = _subjects_;
+	document.getElementById("MAJOR").value = _major_;
+	document.getElementById("YEAR").value = _year_;
+	document.getElementById("AVAIL").value = _availability_;
+	document.getElementById("EXP").value =_experience_;
+	document.getElementById("class").value = _classes_;
 	
 	$("#submit").click(function(){
 		
