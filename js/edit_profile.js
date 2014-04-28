@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
     
-
+	
           
 
   

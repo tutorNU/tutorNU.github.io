@@ -110,13 +110,25 @@ $(document).ready(function(){
         availability_ = results[0]['attributes']['Availability'];
         experience_= results[0]['attributes']['Experience']; 
         password_ = results[0]['attributes']['pwd'];
+        location.href = 'https://tutorNU.github.io/edit_profile.html';
       }
      
     console.log(name_);
     console.log(major_);
     console.log(subjects_);
     console.log(password_);
-    location.href = 'https://tutorNU.github.io/edit_profile.html';
+    $('#Name').html(name_);
+    $('#MAJOR').html(major_);
+    $('#SUBJECT').html(subjects_);
+    $('#EMAIL').html(email_);
+    $('#YEAR').html(year_);
+    $('#rate').html(rating_);
+    $('#Ques').html(questions_);
+    $('#class').html(classes_);
+    $('#AVAIL').html(availability_);
+    $('#EXP').html(experience_);
+    $('#password').html(password_);
+    
   },
   error: function(error) {
     console.log("wrong password");
