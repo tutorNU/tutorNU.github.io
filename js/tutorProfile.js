@@ -117,7 +117,7 @@ $(document).ready(function(){
         console.log(major_);
         console.log(subjects_);
         console.log(password_);
-        document.getElementById("NAME").value =name_;
+        document.getElementById("_NAME_").value =name_;
         $('#MAJOR').val()=major_;
         $('#SUBJECT').val()=subjects_;
         $('#EMAIL').val()=email_;
