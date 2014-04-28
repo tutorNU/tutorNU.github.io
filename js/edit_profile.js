@@ -8,7 +8,7 @@ $(document).ready(function(){
         dataType: "script",
         async: false,           // <-- This is the key
         success: function () {
-            alert("success");
+            console.log("success");
             document.getElementById("NAME").value = _name_;
    			document.getElementById("rate").value =_rating_;
 			document.getElementById("EMAIL").value = _email_;
