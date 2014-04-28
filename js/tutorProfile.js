@@ -81,9 +81,8 @@ $(document).ready(function(){
 
    });
 
-
-
- $('#edit').click(function(){
+ 
+  $('#edit').click(function(){
   var password = prompt("Please enter your password");
   
   var Tutor = Parse.Object.extend("tutor");
@@ -95,7 +94,7 @@ $(document).ready(function(){
   
     // var query1 = new Parse.Query(tutor);
 
-    query.find({
+   query.find({
   success: function(results) {
        if(results[0]['attributes']['email']== Email &&
         results[0]['attributes']['pwd'] == password){
@@ -141,6 +140,9 @@ $(document).ready(function(){
 
 
 });
+
+
+ 
 
 
   

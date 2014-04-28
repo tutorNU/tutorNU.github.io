@@ -86,8 +86,8 @@ $(document).ready(function(){
 			})
 		}
 	})
+
  
-  
 
 
    $.fn.log = function() {
