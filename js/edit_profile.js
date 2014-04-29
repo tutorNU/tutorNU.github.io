@@ -2,7 +2,55 @@ $(document).ready(function(){
 	$('#header .container').html(' ');
 	$('#header .container').html("<center><h3>Edit Listing</h3></center>");
     
-	
+  
+	  var Tutor = Parse.Object.extend("tutor");
+	  var query = new Parse.Query(Tutor);
+	  console.log(password);
+	  console.log(Email);
+	  query.equalTo("email", Email);
+	  query.equalTo("pwd", password);
+	  
+	    // var query1 = new Parse.Query(tutor);
+
+	   query.find({
+	  success: function(results) {
+	       if(results[0]['attributes']['email']== Email &&
+	        results[0]['attributes']['pwd'] == password){
+	        name_ = results[0]['attributes']['Name'];
+	        major_ = results[0]['attributes']['major'];
+	        subjects_ = [results[0]['attributes']['Subject']];
+	        email_= results[0]['attributes']['email'];
+	        year_ = results[0]['attributes']['Year'];
+	        rating_ = results[0]['attributes']['Rating'];
+	        questions_ = results[0]['attributes']['Question']; 
+	        classes_= results[0]['attributes']['Classes'];
+	        availability_ = results[0]['attributes']['Availability'];
+	        experience_= results[0]['attributes']['Experience']; 
+	        password_ = results[0]['attributes']['pwd'];
+
+	        console.log(name_);
+	        console.log(major_);
+	        console.log(subjects_);
+	        console.log(password_);
+	        document.getElementById("_NAME_").value =name_;
+	        $('#MAJOR').val()=major_;
+	        $('#SUBJECT').val()=subjects_;
+	        $('#EMAIL').val()=email_;
+	        $('#YEAR').val()=year_;
+	        $('#rate').val()=rating_;
+	        $('#Ques').val()=questions_;
+	        $('#class').val()=classes_;
+	        $('#AVAIL').val()=availability_;
+	        $('#EXP').val()=experience_;
+	        $('#password').val()=password_;
+	      }
+	  },
+	  error: function(error) {
+	    console.log("wrong password");
+	  }
+	});
+
+
           
 
   
