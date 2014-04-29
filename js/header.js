@@ -17,6 +17,7 @@ document.write(
     "<link rel='apple-touch-icon' sizes='152x152' href='./icons/ios/Icon-72@2x.png'>"+
 
     "<link rel='apple-touch-startup-image' href='./icons/TutorNU_Logo2.png'/>"+
+    "<link rel='apple-touch-startup-image' href='./icons/TutorNU_Logo3.png'/>"+
     "<link href='./css/bootstrap.min.css' rel='stylesheet'>"+
 
 
