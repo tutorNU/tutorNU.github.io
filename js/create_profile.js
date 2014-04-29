@@ -4,20 +4,10 @@ $(document).ready(function(){
 
 	$("#submit").click(function(){
 		
-
-		if($('#password').val() ==""){
-			alert("please enter a password");
-			return ;
-
-	}
-	else{
-    
-
-
 		var Name = $('#NAME').val();
+		var password = $('#password').val();
 		var rate = $('#rate').val();
 		var email = $('#EMAIL').val();
-		var password = $('#password').val();
 		var subject = $('#SUBJECT').val();
 		var major = $('#MAJOR').val();
 		var year = $('#YEAR').val();
@@ -31,6 +21,10 @@ $(document).ready(function(){
 		//validation
 		if(Name==""){
 			alert("Please enter your name.");
+			return;
+		}
+		else if(password==""){
+			alert("Please enter a password.");
 			return;
 		} 	
 		else if(email==""){
