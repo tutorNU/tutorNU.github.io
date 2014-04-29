@@ -22,6 +22,13 @@ document.write(
 
     "<link href='./css/style.css' rel='stylesheet'>"+
     "<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js'></script>"+
+    "<script type='text/javascript'>"+
+        "try {"+
+            "localStorage.test = 2;// try to use localStorage"+      
+        "} catch (e) {//there was an error so..."+
+            "alert('You are in Privacy Mode\nPlease deactivate Privacy Mode and the reload the page.');"+
+        "}"+
+    "</script>"+
   "</head>"+
   
   "<body>"+

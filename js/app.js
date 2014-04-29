@@ -91,34 +91,9 @@ $(document).ready(function(){
   
   display_all_data();
 
-  function private_browsing()
-  {
-    var storageTestKey = 'sTest',
-    storage = window.sessionStorage;
-
-    try {
-      storage.setItem(storageTestKey, 'test');
-      storage.removeItem(storageTestKey);
-    } 
-    catch (e) {
-      if (e.code == DOMException.QUOTA_EXCEEDED_ERR && storage.length == 0) {
-        // private mode
-        alert("Please disable private browsing!");
-      } 
-      else {
-        throw e;
-      }
-    }
-  }
-
-  private_browsing();
 
   //fix the header floating bugs
 // iOS check...ugly but necessary
-
-
-
-
 
   //so it will notice dynamically added elements also
   $(document).on("click", ".tutor-link", function(){
