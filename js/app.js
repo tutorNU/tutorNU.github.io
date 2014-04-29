@@ -109,6 +109,7 @@ $(document).ready(function(){
     location.href= "./create_profile.html";
   });
 
+alert("Hello to private browsers AND non private browsers");
   
 var testKey = 'qeTest', storage = window.sessionStorage; 
 try { // Try and catch quota exceeded errors 
