@@ -72,6 +72,7 @@ $(document).ready(function(){
 
    $("#filler").click(function(){
    	$("#NAME").val("Justin Reay");
+   	$("#password").val("1234");
    	$("#rate").val(15);
 		$("#EMAIL").val("JustinReay2011@u.northwestern.edu");
 		$("#SUBJECT").val("Game Design");
