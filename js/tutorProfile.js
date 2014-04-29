@@ -1,9 +1,11 @@
 
+  
+  var Email = "";
+  var password = "";
+
 
 $(document).ready(function(){
 	$('#header .container').html('');
-  
-  var Email = "";
 
 	/*$(document).on("click", ".back", function(){
    	window.history.go(-1);
