@@ -21,4 +21,5 @@
 	padding:10px 5px;
 }
 
-#edit{height:20px;width:50px;}
+#edit{background: #2a2a2a;color:white;}
+#edit:active, #edit:hover{background: #222222;}
