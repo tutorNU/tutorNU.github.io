@@ -83,7 +83,7 @@ $(document).ready(function(){
 
  
   $('#edit').click(function(){
-  var password = prompt("Please enter your password");
+  var password = prompt("Please enter your password to edit this page.");
   
   var Tutor = Parse.Object.extend("tutor");
   var query = new Parse.Query(Tutor);
