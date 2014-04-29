@@ -110,7 +110,15 @@ $(document).ready(function(){
   });
 
   
- 
-
+  var test = 'test';
+ try
+  {
+    localStorage.setItem(test,test);// try to use localStorage  
+    localStorage.removeItem(test);    
+  }
+  catch (e) 
+  {//there was an error so...
+    alert('You are in Privacy Mode\nPlease deativate Privacy Mode and the reload the page.');
+  }
  
 });
