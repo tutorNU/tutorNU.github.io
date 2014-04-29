@@ -6,17 +6,16 @@
 */
 $(document).ready(function(){
 
-  alert("testing javascript in private browsing");
 
-  // var testKey = 'qeTest', storage = window.sessionStorage; 
-  // try { // Try and catch quota exceeded errors 
-  //   storage.setItem(testKey, '1'); 
-  //   storage.removeItem(testKey); 
-  //   alert("Not in private browsing2!");
-  // } 
-  // catch (error) { 
-  //   alert('Hello, private browser.');
-  // }
+  var testKey = 'qeTest', storage = window.sessionStorage; 
+  try { // Try and catch quota exceeded errors 
+    storage.setItem(testKey, '1'); 
+    storage.removeItem(testKey); 
+    alert("Not in private browsing2!");
+  } 
+  catch (error) { 
+    alert('Hello, private browser.');
+  }
 
   FastClick.attach(document.body);
 
