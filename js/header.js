@@ -11,13 +11,12 @@ document.write(
 
     "<link rel='shortcut icon' sizes='128x128' href='./icons/android/artwork-512.png'>"+
     "<link rel='shortcut icon' sizes='196x196' href='./icons/android/artwork-512.png'>"+
-    "<link rel='apple-touch-startup-image' href='./icons/TutorNU_logo.jpg'>"+
     "<link rel='apple-touch-icon' href='./icons/ios/Icon-Small-30@2x.png'>"+
     "<link rel='apple-touch-icon' sizes='76x76' href='./icons/ios/apple-touch-icon-72x72-precomposed.png'>"+
     "<link rel='apple-touch-icon' sizes='120x120' href='./icons/ios/apple-touch-icon-144x144-precomposed.png'>"+
     "<link rel='apple-touch-icon' sizes='152x152' href='./icons/ios/Icon-72@2x.png'>"+
 
-    "<link rel='apple-touch-startup-image' href='./startup-image.png'>"+
+    "<link rel='apple-touch-startup-image' href='./icons/TutorNU_logo.png'>"+
 
     "<link href='./css/bootstrap.min.css' rel='stylesheet'>"+
 
