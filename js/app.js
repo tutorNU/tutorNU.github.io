@@ -6,16 +6,6 @@
 */
 $(document).ready(function(){
 
-
-  var testKey = 'qeTest', storage = window.sessionStorage; 
-  try { // Try and catch quota exceeded errors 
-    storage.setItem(testKey, '1'); 
-    storage.removeItem(testKey); 
-  } 
-  catch (error) { 
-    alert('You are in Private Browsing mode. Please disable private browsing to view this content.');
-  }
-
   FastClick.attach(document.body);
 
   var tutorDB = Parse.Object.extend("tutor");
