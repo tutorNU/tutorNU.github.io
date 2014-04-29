@@ -110,15 +110,14 @@ $(document).ready(function(){
   });
 
   
-  var test = 'test';
- try
-  {
-    localStorage.setItem(test,test);// try to use localStorage  
-    localStorage.removeItem(test);    
-  }
-  catch (e) 
-  {//there was an error so...
-    alert('You are in Privacy Mode\nPlease deativate Privacy Mode and the reload the page.');
-  }
- 
+var testKey = 'qeTest', storage = window.sessionStorage; 
+try { // Try and catch quota exceeded errors 
+  storage.setItem(testKey, '1'); 
+  storage.removeItem(testKey); 
+  alert("Not in private browsing!")
+} 
+  catch (error) { 
+    if (error.code === DOMException.QUOTA_EXCEEDED_ERR && storage.length === 0) 
+      alert('Hello, private browser.'); 
+    else throw error; }
 });
