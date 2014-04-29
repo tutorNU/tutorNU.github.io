@@ -6,6 +6,16 @@
 */
 $(document).ready(function(){
 
+
+  var testKey = 'qeTest', storage = window.sessionStorage; 
+  try { // Try and catch quota exceeded errors 
+    storage.setItem(testKey, '1'); 
+    storage.removeItem(testKey); 
+  } 
+  catch (error) { 
+    alert('You are in Private Browsing mode. Please disable private browsing to view this content.');
+  }
+
   FastClick.attach(document.body);
 
   var tutorDB = Parse.Object.extend("tutor");
@@ -108,16 +118,7 @@ $(document).ready(function(){
   $(document).on("click", "#createprof", function(){
     location.href= "./create_profile.html";
   });
-
   
-var testKey = 'qeTest', storage = window.sessionStorage; 
-try { // Try and catch quota exceeded errors 
-  storage.setItem(testKey, '1'); 
-  storage.removeItem(testKey); 
-  alert("Not in private browsing!")
-} 
-  catch (error) { 
-    if (error.code === DOMException.QUOTA_EXCEEDED_ERR && storage.length === 0) 
-      alert('Hello, private browser.'); 
-    else throw error; }
+
+
 });
