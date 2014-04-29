@@ -23,16 +23,7 @@ document.write(
 
     "<link href='./css/style.css' rel='stylesheet'>"+
     "<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js'></script>"+
-  "<script type='text/javascript>"+
-  "var testKey = 'qeTest', storage = window.sessionStorage;"+ 
-  "try { // Try and catch quota exceeded errors"+ 
-    "storage.setItem(testKey, '1');"+ 
-    "storage.removeItem(testKey);"+
-  "}"+
-  "catch (error) {"+
-    "alert('You are in Private Browsing mode. Please disable private browsing to view this content.');"+
-  "}"+
-  "</script>"+
+    "<script type='text/javascript' src='./js/private_browsing_check.js'></script>"+
   "</head>"+
   
   "<body>"+
