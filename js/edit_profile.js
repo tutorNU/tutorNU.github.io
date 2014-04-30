@@ -110,8 +110,11 @@ $(document).ready(function(){
    		   				tutor.set('Subject',subject);
    		   				tutor.save();
    		   				alert("Successfully updated listing.")
-   		   				//location.href='./tutor_profile.html#'+Name;
-   		   			},
+                if(tutor.save())
+                {
+   		   				location.href='./tutor_profile.html#'+Name;
+   		   		    }	
+              },
    		   			error: function(error){
    		   				console.log("Could not save object.");
    		   			}
