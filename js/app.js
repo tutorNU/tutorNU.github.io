@@ -19,18 +19,16 @@ $(document).ready(function(){
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
     var major =  tutor['attributes']['major'];
-    for (var i=1;i<20; i++)
-    {
-      image = "./icons/images/ProfileImage"+i+".png";
+
+    var i = Math.floor((Math.random() * 19) + 1);
+    image = "./icons/images/ProfileImage"+i+".png";
     
     $('#tutor-list').append("<div class='tutor-link'>"+
         "<div class='row'>"+
           "<div class='col-sm-2'>"+
             "<div class='row'>"+
-              "<div class='media-img' pull-left  col-sm-5  col-md-3'>"+
-               "<div class='imagelist'>"+
-                "<img src='"+image+"'height='45'width='45'/>"+
-               "</div>"+
+              "<div class='media-img pull-left  col-sm-5  col-md-3'>"+
+                "<img src="+image+" height='45'width='45'/>"+
               "</div>"+
               "<div class='media-body  col-sm-7 col-md-8  '>"+
                 "<h4 class='media-heading'>"+name+"</h4>"+
@@ -43,7 +41,6 @@ $(document).ready(function(){
         "</div>"+
       "</div>"
       );  
-    }
   }
 
 
