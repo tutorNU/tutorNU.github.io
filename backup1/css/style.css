@@ -1,0 +1,55 @@
+html{font-family: Helvetica;}
+
+body {padding-top:80px;}
+
+.navbar{height:80px;}
+
+
+.navbar-inverse{background-color: #520063;}
+
+#content{padding:0 15px;margin-bottom:50px;overflow:hidden;}
+
+/*margin:top right bottom left;*/
+#searchfield {margin:30px auto 20px; outline:none;}
+
+#outputcontent{text-align:center;}
+
+#autocomplete{outline:none;}
+
+#tutor-list{}
+
+#tutor-list a{text-decoration: none;color:inherit;}
+
+.tutor-link .media-body{padding-left: 0px;}
+
+.pricebox{
+	font-size:1.3em;
+	font-weight:bold;
+	color:#520063;
+	position: relative;
+	bottom:25px;
+	margin-right: 5%;
+
+}
+
+.tutor-link{border-bottom:1px solid #CCCCCC;}
+.tutor-link:active{background-color: #DCDCDC;}
+.tutor-link .col-sm-2{padding:10px;padding-bottom:0px;}
+
+.navbar-fixed-bottom{background: rgba(255, 255, 255, 1.0);}
+
+.col-xs-4{padding:8px 0px;}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+#footer{padding-top:20px;}
+#footer a{text-decoration: none;}
