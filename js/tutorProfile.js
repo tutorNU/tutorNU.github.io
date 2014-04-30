@@ -51,7 +51,7 @@ $(document).ready(function(){
       
       //<span class='glyphicon glyphicon-chevron-left'></span> <--back button
       $('#header .container').html("<center><h3>"+name+"</h3></center>");
-     
+      document.getElementById("profpic").src = "./icons/images/" + name + ".png";
       $('#aboutname').html(name.split(' ')[0]);
       $('#major').html(major);
       $('#year').html(year);
