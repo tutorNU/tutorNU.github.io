@@ -57,7 +57,7 @@ $(document).ready(function(){
 		var availability = $('#AVAIL').val();
 		var experience = $('#EXP').val();
 		var Class = $('#class').val();
-	  	var questions = $('#Ques').val();
+	  var questions = $('#Ques').val();
 
 
 		//validation
@@ -110,7 +110,7 @@ $(document).ready(function(){
    		   				tutor.set('Subject',subject);
    		   				tutor.save();
    		   				alert("Successfully updated listing.")
-   		   				location.href='./tutor_profile.html#'+Name;
+   		   				//location.href='./tutor_profile.html#'+Name;
    		   			},
    		   			error: function(error){
    		   				console.log("Could not save object.");
