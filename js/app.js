@@ -20,7 +20,7 @@ $(document).ready(function(){
     var email = tutor['attributes']['email'];
     var major =  tutor['attributes']['major'];
 
-    console.log(name);
+    //console.log(name);
     image = "./icons/images/"+name+".png";
 
 

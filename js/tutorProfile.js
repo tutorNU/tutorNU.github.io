@@ -1,9 +1,3 @@
-
-  
-  var Email = "";
-  var password = "";
-
-
 $(document).ready(function(){
   $('#header .container').html('');
 
@@ -70,11 +64,11 @@ $(document).ready(function(){
       if(classes) $('#class .panel-body').html(classes);
       else $('#class .panel-body').html("<b>No classes listed.</b>");
 
-      // if(availability) $('#availability .panel-body').html(availability); 
-      // else $('#availability .panel-body').html("<b>No availability given.</b>");
+      if(availability) $('#availability .panel-body').html(availability); 
+      else $('#availability .panel-body').html("<b>No availability given.</b>");
 
-      // if(experience) $('#experience .panel-body').html(experience);
-      // else $('#experience .panel-body').html("<b>No experience provided.</b>");
+      if(experience) $('#experience .panel-body').html(experience);
+      else $('#experience .panel-body').html("<b>No experience provided.</b>");
       },
 
     error: function(err){
