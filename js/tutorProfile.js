@@ -45,7 +45,7 @@ $(document).ready(function(){
       
       //<span class='glyphicon glyphicon-chevron-left'></span> <--back button
       $('#header .container').html("<center><h3>"+name+"</h3></center>");
-     
+      document.getElementById("profpic").src = "./icons/images/" + name + ".png";
       $('#aboutname').html(name.split(' ')[0]);
       $('#major').html(major);
       $('#year').html(year);
@@ -79,19 +79,19 @@ $(document).ready(function(){
 
  
   $('#edit').click(function(){
-  var password = prompt("Please enter your password to edit this page.");
+    var password = prompt("Please enter your password to edit this page.");
   
-  var Tutor = Parse.Object.extend("tutor");
-  var query = new Parse.Query(Tutor);
-  console.log(password);
-  console.log(Email);
-  query.equalTo("email", Email);
-  query.equalTo("pwd", password);
+    var Tutor = Parse.Object.extend("tutor");
+    var query = new Parse.Query(Tutor);
+    console.log(password);
+    console.log(Email);
+    query.equalTo("email", Email);
+    query.equalTo("pwd", password);
   
     // var query1 = new Parse.Query(tutor);
 
    query.find({
-  success: function(results) {
+    success: function(results) {
      
        if(results[0]['attributes']['email']== Email &&
         results[0]['attributes']['pwd'] == password){
@@ -106,26 +106,17 @@ $(document).ready(function(){
         availability_ = results[0]['attributes']['Availability'];
         experience_= results[0]['attributes']['Experience']; 
         password_ = results[0]['attributes']['pwd'];
-        id = results[0].id;
-       
-
+        id_ = results[0].id;
         
-        location.href = "./edit_profile.html#"+id;
-
-
+        page = "./edit_profile.html#"+id_;
         
-      
-      
-       
-
-        
-      }
-     
+        location.href = page;
     
-
+      }
+      else alert("Password is incorrect.");
   },
   error: function(error) {
-    console.log("wrong password");
+    alert("There was an unexpected error. Please try again.");
   }
 });
 
