@@ -19,19 +19,17 @@ $(document).ready(function(){
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
     var major =  tutor['attributes']['major'];
-    var images = {'image1':'./icons/55x65/ProfileImage1.png',
-                  'image2':'./icons/55x65/ProfileImage2.png'
-                 }
-    for (var i = 0 ; i<2; i++)
+    for (var i=1;i<20; i++)
     {
-      $('.media-img').append('<img src="'+images[i]+'"  />')
-    }
+      image = "./icons/images/ProfileImage"+i+".png";
+    
     $('#tutor-list').append("<div class='tutor-link'>"+
         "<div class='row'>"+
           "<div class='col-sm-2'>"+
             "<div class='row'>"+
               "<div class='media-img' pull-left  col-sm-5  col-md-3'>"+
                "<div class='imagelist'>"+
+                "<img src='"+image+"'height='45'width='45'/>"+
                "</div>"+
               "</div>"+
               "<div class='media-body  col-sm-7 col-md-8  '>"+
@@ -45,7 +43,7 @@ $(document).ready(function(){
         "</div>"+
       "</div>"
       );  
-
+    }
   }
 
 
