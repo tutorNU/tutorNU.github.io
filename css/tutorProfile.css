@@ -12,14 +12,6 @@
 	color:white;
 }
 
-.nav-pills li{width:15%;font-size:1em;}
-
-.nav>li>a{
-	position:relative;
-	display:block;
-	padding:10px 5px;
-}
-
-#edit{background: #2a2a2a;color:white;width:75px;}
+.panel .panel-title a{text-decoration: none;}
+#edit{background: #2a2a2a;color:white;width:75px;outline:none;}
 #edit:active, #edit:hover{background: #222222;}
-*/
