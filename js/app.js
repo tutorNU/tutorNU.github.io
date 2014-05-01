@@ -33,7 +33,7 @@ $(document).ready(function(){
             "<div class='row'>"+
 
               "<div class='media-img pull-left  col-sm-5  col-md-3'>"+
-                "<img src='"+image+"' alt='./placeholder.png' height='55'width='55'/>"+
+                "<img src='"+image+"' height='55' width='55'/>"+
 
               "</div>"+
               "<div class='media-body col-sm-7 col-md-8  '>"+
