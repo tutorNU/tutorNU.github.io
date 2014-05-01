@@ -22,6 +22,7 @@ document.write(
 
 
     "<link href='./css/style.css' rel='stylesheet'>"+
+    "<link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>"+
     "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>"+
     "<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js'></script>"+
     "<script src='https://www.parsecdn.com/js/parse-1.2.18.min.js'></script>"+
@@ -36,7 +37,7 @@ document.write(
         "<span class='input-group-addon'><span class='glyphicon glyphicon-search'></span></span>"+
         "<input type='text' id='autocomplete' class='form-control' placeholder='Search by subject, price, etc.'>"+
       "</div>"+
-      "<span id='logo'>tutor<br/><span style='position:relative;bottom:5px;left:4px;'>NU</span></span>"+
+      "<span id='logo'>tutor<br/><span style='position:relative;bottom:8px;left:4px;'>NU</span></span>"+
 
       "</div>"+
     "</div>"+
