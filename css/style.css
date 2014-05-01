@@ -7,7 +7,7 @@ body {padding-top:80px;}
 
 .navbar-inverse{background-color: #520063;}
 
-#content{padding:0 15px;margin-bottom:50px;overflow:hidden;}
+#content{padding:0 15px;margin-bottom:50px;overflow-x:hidden;overflow-y:auto;}
 
 /*margin:top right bottom left;*/
 #searchfield {margin:30px auto 20px; outline:none;}
