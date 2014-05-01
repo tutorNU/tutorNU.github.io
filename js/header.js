@@ -36,6 +36,8 @@ document.write(
         "<span class='input-group-addon'><span class='glyphicon glyphicon-search'></span></span>"+
         "<input type='text' id='autocomplete' class='form-control' placeholder='Search by subject, price, etc.'>"+
       "</div>"+
+      "<span id='logo'>tutorNU</span>"+
+
       "</div>"+
     "</div>"+
    

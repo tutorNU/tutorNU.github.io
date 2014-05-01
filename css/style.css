@@ -10,13 +10,13 @@ body {padding-top:80px;}
 #content{padding:0 15px;margin-bottom:50px;overflow-x:hidden;overflow-y:auto;}
 
 /*margin:top right bottom left;*/
-#searchfield {margin:30px auto 20px; outline:none;}
+#searchfield {margin:30px 80px 20px auto; outline:none;}
+
+#logo{color:white;display:inline-block;float:right;position:relative;bottom:50px;font-weight:bold;font-size:18px;}
 
 #outputcontent{text-align:center;}
 
 #autocomplete{outline:none;}
-
-#tutor-list{}
 
 #tutor-list a{text-decoration: none;color:inherit;}
 
