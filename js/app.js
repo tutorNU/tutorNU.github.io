@@ -14,8 +14,10 @@ $(document).ready(function(){
 
   function display_tutor(tutor)
   {
+    r = /(?=\S)[^,]+?(?=\s*(,|$))/g;
     var name = tutor['attributes']['Name'];
     var subject = tutor['attributes']['Subject'];
+    var subjarr = subject.match(r);
     var price = tutor['attributes']['Rate'];
     var email = tutor['attributes']['email'];
     var major =  tutor['attributes']['major'];
@@ -31,13 +33,13 @@ $(document).ready(function(){
             "<div class='row'>"+
 
               "<div class='media-img pull-left  col-sm-5  col-md-3'>"+
-                "<img src='"+image+"' height='65'width='55'/>"+
+                "<img src='"+image+"' height='55' width='55'/>"+
 
               "</div>"+
               "<div class='media-body col-sm-7 col-md-8  '>"+
                 "<h4 class='media-heading'>"+name+"</h4>"+
                 "<p class='hidden-sm'>Major: "+major+
-                "<br/>Subject: "+subject+
+                "<br/>Subject: "+subjarr[0]+
                 "<span class='pricebox pull-right'>$"+price+"/hr</span></p>"+
               "</div>"+
             "</div>"+

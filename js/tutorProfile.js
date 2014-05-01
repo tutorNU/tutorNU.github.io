@@ -29,14 +29,17 @@ $(document).ready(function(){
       var password ="johnsmith";
 
       if(results[0]){
+        r = /(?=\S)[^,]+?(?=\s*(,|$))/g; //regexp to separate subjects by comma and spaces
         name = results[0]['attributes']['Name'];
         major = results[0]['attributes']['major'];
-        subjects = [results[0]['attributes']['Subject']];
+        subjects = results[0]['attributes']['Subject'];
+        subjarr = subjects.match(r);
         email= results[0]['attributes']['email'];
         year = results[0]['attributes']['Year'];
         rating = results[0]['attributes']['Rating'];
         questions = results[0]['attributes']['Question']; 
         classes= results[0]['attributes']['Classes'];
+        classarr = classes.match(r);
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
         password = results[0]['attributes']['password'];
@@ -55,13 +58,13 @@ $(document).ready(function(){
           name.split(' ')[0]+
           " an email!</span></a>");
 
-      if(subjects) for(var i=0;i<subjects.length;i++) $('#skills .panel-body ul').append("<li>"+subjects[i]+"</li>");
+      if(subjects) for(var i=0;i<subjarr.length;i++) $('#skills .panel-body ul').append("<li>"+subjarr[i]+"</li>");
       else $('#skills .panel-body').html("No subjects listed.");
 
       if(rating) for(var i=0;i<rating.length;i++){$('#reviews .panel-body').append("<p><b>("+rating[i]['grade']+")</b>  "+rating[i]['review']+"<br/>  - "+rating[i]['who']+"<br/><br/>");}
       else $('#reviews .panel-body').html("<b>No reviews yet.</b>");
 
-      if(classes) $('#class .panel-body').html(classes);
+      if(classes) for(var i=0;i<classarr.length;i++) $('#class .panel-body ul').append("<li>"+classarr[i]+"</li>");
       else $('#class .panel-body').html("<b>No classes listed.</b>");
 
       if(availability) $('#availability .panel-body').html(availability); 
