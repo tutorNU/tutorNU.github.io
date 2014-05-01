@@ -33,13 +33,13 @@ $(document).ready(function(){
         name = results[0]['attributes']['Name'];
         major = results[0]['attributes']['major'];
         subjects = results[0]['attributes']['Subject'];
-        subjarr = subjects.match(r);
+        if(subjects) subjarr = subjects.match(r);
         email= results[0]['attributes']['email'];
         year = results[0]['attributes']['Year'];
         rating = results[0]['attributes']['Rating'];
         questions = results[0]['attributes']['Question']; 
         classes= results[0]['attributes']['Classes'];
-        classarr = classes.match(r);
+        if(classes) classarr = classes.match(r);
         availability = results[0]['attributes']['Availability'];
         experience = results[0]['attributes']['Experience']; 
         password = results[0]['attributes']['password'];
