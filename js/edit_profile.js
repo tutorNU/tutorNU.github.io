@@ -20,23 +20,23 @@ $(document).ready(function(){
    		email= results['attributes']['email'];
    		year = results['attributes']['Year'];
    		price = results['attributes']['Rate'];
-        questions = results['attributes']['Question']; 
-        classes= results['attributes']['Classes'];
-        availability = results['attributes']['Availability'];
-        experience = results['attributes']['Experience']; 
-        password = results['attributes']['pwd'];
+      questions = results['attributes']['Question']; 
+      classes= results['attributes']['Classes'];
+      availability = results['attributes']['Availability'];
+      experience = results['attributes']['Experience']; 
+      password = results['attributes']['pwd'];
         
-        $("#_NAME_").val(name) ;
-        $('#MAJOR').val(major);
-        $('#SUBJECT').val(subjects);
-        $('#EMAIL').val(email);
-        $('#YEAR').val(year);
-        $('#rate').val(price);
-        $('#Ques').val(questions);
-        $('#class').val(classes);
-        $('#AVAIL').val(availability);
-        $('#EXP').val(experience);
-        $('#pwd').val(password);
+      $("#_NAME_").val(name) ;
+      $('#MAJOR').val(major);
+      $('#SUBJECT').val(subjects);
+      $('#EMAIL').val(email);
+      $('#YEAR').val(year);
+      $('#rate').val(price);
+      $('#Ques').val(questions);
+      $('#classes').val(classes);
+      $('#AVAIL').val(availability);
+      $('#EXP').val(experience);
+      $('#pwd').val(password);
 	  },
 	  error: function(error) {
 	    console.log("wrong password");
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		var year = $('#YEAR').val();
 		var availability = $('#AVAIL').val();
 		var experience = $('#EXP').val();
-		var Class = $('#class').val();
+		var classes = $('#classes').val();
 	  var questions = $('#Ques').val();
 
 
@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 
 		var tutor = Parse.Object.extend("tutor");
-  		var query = new Parse.Query(tutor);
+  	var query = new Parse.Query(tutor);
        
 		var url = location.href;
 
@@ -106,7 +106,7 @@ $(document).ready(function(){
    		   				tutor.set('Experience',experience);
    		   				tutor.set('major',major);
    		   				tutor.set('Name',Name);
-   		   				tutor.set('Classes',Class);
+   		   				tutor.set('Classes',classes);
    		   				tutor.set('Subject',subject);
    		   				tutor.save();
    		   				alert("Successfully updated listing.")

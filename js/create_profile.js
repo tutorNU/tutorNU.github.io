@@ -13,7 +13,7 @@ $(document).ready(function(){
 		var year = $('#YEAR').val();
 		var availablity = $('#AVAIL').val();
 		var experience = $('#EXP').val();
-		var Class = $('#class').val();
+		var classes = $('#classes').val();
 	  	var questions = $('#Ques').val();
 		var rating = [{"grade":"","review":"","who":""}];
 
@@ -55,12 +55,12 @@ $(document).ready(function(){
 			Question: questions,
 			Availability : availablity,
 			Experience : experience,
-			Classes: Class
+			Classes: classes
 
 			}, 
 			{
   			success: function(tutor) {
-  				location.href='https://tutorNU.github.io/index.html';
+  				//location.href='https://tutorNU.github.io/index.html';
     			// The object was saved successfully.
   			},
   			error: function(tutor, error) {
