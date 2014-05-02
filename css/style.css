@@ -55,3 +55,6 @@ body {padding-top:80px;}
 }
 #footer{padding-top:20px;}
 #footer a{text-decoration: none;}
+
+#f-edit{color:#428bca;}
+#f-edit:hover, #f-edit:active{color:#2a6496;cursor:pointer;}

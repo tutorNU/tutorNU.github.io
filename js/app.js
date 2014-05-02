@@ -116,10 +116,39 @@ $(document).ready(function(){
     location.href= "./index.html";
   });
 
-  $(document).on("click", "#createprof", function(){
+  $(document).on("click", "#createprof", function(){  
     location.href= "./create_profile.html";
   });
-  
 
+  //$(document).on("click", "#f-edit", function(e){
+  $("#f-edit").click(function(){
+
+    info = prompt("Please enter your email and password in the following form:\ntutor@gmail.com:mypassword");
+    email=info.split(":")[0];
+    pwd=info.split(":")[1];
+
+    var Tutor = Parse.Object.extend("tutor");
+    var query = new Parse.Query(Tutor);
+    query.equalTo("email", email);
+    query.equalTo("pwd", pwd);
+
+    query.find({
+      success: function(results) {     
+        if(results.length>0){
+          id_ = results[0].id;
+        
+          page = "./edit_profile.html#"+id_;
+
+          location.href=page;
+    
+        }
+        else alert("Password or email is incorrect.");
+      },
+      error: function(error) {
+        alert("There was an unexpected error. Please try again.");
+
+      }
+    });
+  });
 
 });

@@ -86,8 +86,6 @@ $(document).ready(function(){
   
     var Tutor = Parse.Object.extend("tutor");
     var query = new Parse.Query(Tutor);
-    console.log(password);
-    console.log(Email);
     query.equalTo("email", Email);
     query.equalTo("pwd", password);
   
@@ -96,8 +94,7 @@ $(document).ready(function(){
    query.find({
     success: function(results) {
      
-       if(results[0]['attributes']['email']== Email &&
-        results[0]['attributes']['pwd'] == password){
+       if(results[0]['attributes']['email']== Email && results[0]['attributes']['pwd'] == password){
         name_ = results[0]['attributes']['Name'];
         major_ = results[0]['attributes']['major'];
         subjects_ = [results[0]['attributes']['Subject']];
@@ -117,11 +114,11 @@ $(document).ready(function(){
     
       }
       else alert("Password is incorrect.");
-  },
-  error: function(error) {
-    alert("There was an unexpected error. Please try again.");
-  }
-});
+    },
+    error: function(error) {
+      alert("There was an unexpected error. Please try again.");
+    }
+  });
 
 
 });
