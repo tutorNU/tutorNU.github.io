@@ -29,16 +29,16 @@ $(document).ready(function(){
 
     $('#tutor-list').append("<div class='tutor-link'>"+
         "<div class='row'>"+
-          "<div class='col-sm-2'>"+
+          "<div class='col-sm-12'>"+
             "<div class='row'>"+
 
-              "<div class='media-img pull-left  col-sm-5  col-md-3'>"+
+              "<div class='media-img pull-left tutor-col'>"+
                 "<img src='"+image+"' height='55' width='55'/>"+
 
               "</div>"+
-              "<div class='media-body col-sm-7 col-md-8  '>"+
+              "<div class='media-body'>"+
                 "<h4 class='media-heading'>"+name+"</h4>"+
-                "<p class='hidden-sm'>Major: "+major+
+                "<p>Major: "+major+
                 "<br/>Subject: "+subjarr[0]+
                 "<span class='pricebox pull-right'>$"+price+"/hr</span></p>"+
               "</div>"+

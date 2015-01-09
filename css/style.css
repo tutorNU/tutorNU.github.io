@@ -1,13 +1,13 @@
 html{font-family: Helvetica;}
 
-body {padding-top:80px;}
+body {padding-top:80px; background:#808080;}
 
 .navbar{height:80px;}
 
 
 .navbar-inverse{background-color: #520063;}
 
-#content{padding:0 15px;margin-bottom:50px;overflow-x:hidden;overflow-y:auto;}
+#content{padding:0 15px;margin-bottom:50px;overflow-x:hidden;overflow-y:auto; background:white;max-width: 760px;}
 
 /*margin:top right bottom left;*/
 #searchfield {margin:30px 60px 20px auto; outline:none;}
@@ -34,7 +34,7 @@ body {padding-top:80px;}
 
 }
 
-.tutor-link{border-bottom:1px solid #CCCCCC;}
+.tutor-link{border-bottom:1px solid #CCCCCC;padding-top: 10px;}
 .tutor-link:active{background-color: #DCDCDC;}
 .tutor-link .col-sm-2{padding:10px;padding-bottom:0px;}
 
@@ -58,3 +58,12 @@ body {padding-top:80px;}
 
 #f-edit{color:#428bca;}
 #f-edit:hover, #f-edit:active{color:#2a6496;cursor:pointer;}
+
+.tutor-col{
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right:	15px;
+}
+
+
