@@ -66,4 +66,8 @@ body {padding-top:80px; background:#808080;}
 	padding-right:	15px;
 }
 
+.container{
+	max-width: 760px;
+}
+
 
